@@ -1,4 +1,1341 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-13T22:03:41-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00-10:00</published><updated>2016-02-24T22:48:00-10:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-13T22:39:26-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">:hammer: Algorithms Anonymous</title><link href="http://localhost:4000/project-algorithms-anonymous/" rel="alternate" type="text/html" title=":hammer: Algorithms Anonymous" /><published>2019-01-03T22:10:00-10:00</published><updated>2019-01-03T22:10:00-10:00</updated><id>http://localhost:4000/project-algorithms-anonymous</id><content type="html" xml:base="http://localhost:4000/project-algorithms-anonymous/">&lt;h1 id=&quot;clrs-problem-set-solutions&quot;&gt;CLRS Problem Set Solutions&lt;/h1&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-01&quot;&gt;Problem Set 01&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#linear-search&quot;&gt;Linear Search&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#binary-search&quot;&gt;Binary Search&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bubble-sort&quot;&gt;Bubble Sort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-02&quot;&gt;Problem Set 02&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#asymptotic-analysis&quot;&gt;Asymptotic Analysis&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#print-binary-tree&quot;&gt;Print Binary Tree&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#merge-insertion-sort&quot;&gt;Merge Insertion Sort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-03&quot;&gt;Problem Set 03&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#expected-length-of-a-coding-scheme&quot;&gt;Expected Length of a Coding Scheme&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#hashing-with-chaining&quot;&gt;Hashing with Chaining&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#skip-lists&quot;&gt;Skip Lists&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-04&quot;&gt;Problem Set 04&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#master-method&quot;&gt;Master Method&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#substitution&quot;&gt;Substitution&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#more-fun-with-binary-search-trees&quot;&gt;More Fun with Binary Search Trees&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-05&quot;&gt;Problem Set 05&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#d-ary-heaps&quot;&gt;D-Ary Heaps&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#3-way-quicksort&quot;&gt;3 Way Quicksort&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-06&quot;&gt;Problem Set 06&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#sorting-large-numbers&quot;&gt;Sorting Large Numbers&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#red-black-trees&quot;&gt;Red Black Trees&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#problem-set-07&quot;&gt;Problem Set 07&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#dynamic-programming&quot;&gt;Dynamic Programming&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#longest-paths&quot;&gt;Longest Paths&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#activity-scheduling&quot;&gt;Activity Scheduling&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a collection of course work, mostly consisting of problems taken from the CLRS MIT Press
+textbook.  The algorithms course was completed in December of 2018.  This repository is a 
+demonstration of my own personal understanding of the material covered.  There are a total of 
+eleven problem sets in all.  The first half deals mainly with a slightly more mathematically 
+rigorous look into some classic data structures and algorithms.  Then we’ll dive into a more 
+exciting domain (graphs!) and explore more awesome concepts!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note to reader: Problem sets are currently in the process of being transmogrified into this GitHub page.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-01&quot;&gt;Problem set 01&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A collection of loop invariant proofs, as well as a recurrence tree proof.  The algorithms involved in this problem set
+include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;linear search&lt;/li&gt;
+  &lt;li&gt;binary search&lt;/li&gt;
+  &lt;li&gt;bubble sort&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;linear-search&quot;&gt;Linear Search&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;LinearSearch(A, n, v)
+  for i = 0 to n - 1
+    if A[i] == v
+      return i
+  return NIL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Loop invariant:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At the start of each iteration of the for loop, the sub-array A’[&lt;em&gt;0..i - 1&lt;/em&gt;] does not contain the value &lt;em&gt;v&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When the for loop is read, &lt;em&gt;i = 0&lt;/em&gt;, thus the sub-array A’ is empty.  Therefore the invariant is vacuously true.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Maintenance:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With each iteration, assume A’[0..&lt;em&gt;i&lt;/em&gt; - 1] does not contain &lt;em&gt;v&lt;/em&gt;, if A[ &lt;em&gt;i&lt;/em&gt; ] == &lt;em&gt;v&lt;/em&gt;, &lt;em&gt;i&lt;/em&gt; is returned.  Otherwise, &lt;em&gt;i = i +
+1&lt;/em&gt;.  So, we have…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i - 1 = (i - 1) + 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i - 1 = i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore the invariant is maintained.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Termination:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;if &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; - 1 and A[ &lt;em&gt;i&lt;/em&gt; ] != &lt;em&gt;v&lt;/em&gt;, then &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; and the loop exits.  Because the invariant was maintained, the sub-array 
+A’[&lt;em&gt;0..i - 1&lt;/em&gt;] does not contain &lt;em&gt;v&lt;/em&gt;, but &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt;.  So, we have…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i - 1 = n - 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore A[&lt;em&gt;0..n - 1&lt;/em&gt;] does not contain &lt;em&gt;v&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h3 id=&quot;binary-search&quot;&gt;Binary Search&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;BinarySearch(x, A, min, max)
+  low = min
+  high = max
+  while low &amp;lt;= high
+    mid = floor( (low + high) / 2 )
+    if x &amp;lt; A[mid]
+      high = mid - 1
+    else if x &amp;gt; A[mid]
+      high = mid + 1
+    else
+      return mid
+  return NIL
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;A recurrence relation can be defined to represent binary search as follows…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;T(n) = aT(n / b) + D(n) + C(n)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;T(1) = Θ(1) = c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;D(n)&lt;/em&gt; be the cost to divide and &lt;em&gt;C(n)&lt;/em&gt; be the cost to compare.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;D(n) = ⌊(low + high) / 2⌋ = Θ(1) = c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;em&gt;low&lt;/em&gt; and &lt;em&gt;high&lt;/em&gt; are the respective indices corresponding to the sub-arrays within each level of recursion.&lt;/p&gt;
+
+&lt;p&gt;It is easy to see &lt;em&gt;C(n) = Θ(1)&lt;/em&gt;, as only a single key comparison occurs in the array A&lt;sub&gt;k&lt;/sub&gt; on the &lt;em&gt;kth&lt;/em&gt; call
+to &lt;em&gt;T(n)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;For the values of &lt;em&gt;a&lt;/em&gt; and &lt;em&gt;b&lt;/em&gt;, binary search divides the problem in half, working on only one of the resulting halves. This gives us…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a = 1 and b = 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So, putting this all together we have…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;T(n) = T(n / 2) + Θ(1) + Θ(1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;= T(n / 2) + Θ(1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;= T(n / 2) + c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;em&gt;c = T(1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If defined as a recurrence tree, binary search could be thought of as a path from the root to a single leaf, as only one edge
+per level is traversed.&lt;/p&gt;
+
+&lt;p&gt;Or, &lt;em&gt;c + c + … + c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;= c(1 + 1 + … + 1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Claim:&lt;/strong&gt; &lt;em&gt;c(1 + 1 + … + 1) = c(log&lt;sub&gt;2&lt;/sub&gt;(n) + 1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Proof:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Base case: &lt;em&gt;n = 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Hypothesis: &lt;em&gt;The levels of a tree with 2&lt;sup&gt;i&lt;/sup&gt; leaves = log&lt;sub&gt;2&lt;/sub&gt;(2&lt;sup&gt;i&lt;/sup&gt;) + 1 = i + 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;n = 2&lt;sup&gt;i + 1&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;log&lt;sub&gt;2&lt;/sub&gt;(2&lt;sup&gt;i + 1&lt;/sup&gt;) + 1 = i + 1 + 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(i + 1)log&lt;sub&gt;2&lt;/sub&gt;2 + 1 = i + 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i + 2 = i + 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Therefore&lt;/strong&gt; in the worst case, binary search has a constant cost, &lt;em&gt;c&lt;/em&gt;, &lt;em&gt;log&lt;sub&gt;2&lt;/sub&gt;(n) + 1&lt;/em&gt; times, or…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;c(log&lt;sub&gt;2&lt;/sub&gt;(n) + 1)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;= clog&lt;sub&gt;2&lt;/sub&gt;(n) + c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;= Θ(log&lt;sub&gt;2&lt;/sub&gt;(n))&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;QED&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bubble-sort&quot;&gt;Bubble Sort&lt;/h3&gt;
+
+&lt;p&gt;One of the main benefits of bubble sort is early termination if no ‘bubbling’ occurs.  In this example, no such consideration
+is taken.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;BubbleSort(A)
+  for i = 1 to A.length - 1
+    for j = A.length downto i + 1
+      if A[j] &amp;lt; A[j - 1]
+        exchange A[j] with A[j - 1]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This implementation also takes a ‘bubble down’ approach.  Our proof will attack the inner loop first, working our way out.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Loop Invariant:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;At the start of each iteration of the inner loop, the element A[ &lt;em&gt;j&lt;/em&gt; ] ≤ A[ &lt;em&gt;j + 1&lt;/em&gt; ].&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When the loop begins, &lt;em&gt;j&lt;/em&gt; = A.length, because no element exists at A[ &lt;em&gt;j + 1&lt;/em&gt; ] the invariant is vacuously true.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Maintenance:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With each successive iteration, if A[ &lt;em&gt;j&lt;/em&gt; ] &amp;#60; A[ &lt;em&gt;j - 1&lt;/em&gt; ] then the values are exchanged.  Because &lt;em&gt;j&lt;/em&gt; is decremented,
+&lt;em&gt;j&lt;/em&gt; = &lt;em&gt;j - 1&lt;/em&gt;.  Therefore the exchange results in A[ &lt;em&gt;j&lt;/em&gt; ] ≤ A[ &lt;em&gt;j + 1&lt;/em&gt; ] by susbstituting the values of &lt;em&gt;j&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Termination:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When &lt;em&gt;j&lt;/em&gt; = &lt;em&gt;i + 1&lt;/em&gt;, the comparison taking place occurs between &lt;em&gt;j&lt;/em&gt; and &lt;em&gt;i&lt;/em&gt; because &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;j - 1&lt;/em&gt;.  When &lt;em&gt;j&lt;/em&gt; is decremented
+once more, the loop exits with &lt;em&gt;j&lt;/em&gt; = &lt;em&gt;i&lt;/em&gt;.  The invariant was maintained, thus by substitution…&lt;/p&gt;
+
+&lt;p&gt;A[ &lt;em&gt;i&lt;/em&gt; ] ≤ A[ &lt;em&gt;i + 1&lt;/em&gt; ]&lt;/p&gt;
+
+&lt;p&gt;Let us now use this result to prove correctness of the outer loop…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Loop Invariant:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The Array A’ consists of the elements A[ &lt;em&gt;1..i&lt;/em&gt; ] such that A’[ 1 ] ≤ A’[ 2 ] ≤ … ≤ A’[ &lt;em&gt;i&lt;/em&gt; ]&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Initialization:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The loop begins with &lt;em&gt;i&lt;/em&gt; = 1, thus the invariant vacuously holds for an array of size one.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Maintenance:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With each iteration of the outer loop, we showed that termination of the inner loop results in A[ &lt;em&gt;i&lt;/em&gt; ] ≤ A[ &lt;em&gt;i + 1&lt;/em&gt; ].
+Each pass then increments &lt;em&gt;i&lt;/em&gt;, resulting in &lt;em&gt;i&lt;/em&gt; = &lt;em&gt;i + 1&lt;/em&gt;, but this means A[ &lt;em&gt;i - 1&lt;/em&gt; ] ≤ A[ &lt;em&gt;i&lt;/em&gt; ].  Therefore A’ is
+maintained.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Termination:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When &lt;em&gt;i&lt;/em&gt; = A.length the loop exits.  Maintenance shows that A’[ 1 ] ≤ A’[ 2 ] ≤ … ≤ A’[ &lt;em&gt;i&lt;/em&gt; ], but 
+&lt;em&gt;i&lt;/em&gt; = A.length.  Therefor A’[1..A.length] is the output.&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Analysis:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the worst case, the inner loop iterates &lt;em&gt;n - (i + 1) + 1&lt;/em&gt; or &lt;em&gt;n - i&lt;/em&gt; times in relation to the outer loop.&lt;/p&gt;
+
+&lt;p&gt;So,&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i = 1 : j = n - 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i = 2 : j = n - 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;i = n - 1 : j = 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Which is equivalent to…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;(n - 1) + (n - 2) + (n - 3) + … + 1&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;= &lt;em&gt;n(n - 1) / 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;= &lt;em&gt;(n&lt;sup&gt;2&lt;/sup&gt; - n) / 2&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;= &lt;em&gt;&lt;strong&gt;O&lt;/strong&gt;(n&lt;sup&gt;2&lt;/sup&gt;)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;In our implementation we can make this a tight bound of Θ(n&lt;sup&gt;2&lt;/sup&gt;) because no optimization takes place.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-02&quot;&gt;Problem Set 02&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A collection of asymptotic proofs, in regard to defining a handful of functions into sets of &lt;strong&gt;O&lt;/strong&gt;, Θ, Ω,
+as well as &lt;strong&gt;o&lt;/strong&gt;, θ, ω.  We will also take a brief look into binary trees, along with an analysis of a
+merge-insertion sort hybrid algorithm.&lt;/p&gt;
+
+&lt;h3 id=&quot;asymptotic-analysis&quot;&gt;Asymptotic Analysis&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;f(n)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;g(n)&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;O&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;o&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Ω&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;ω&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Θ&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4n&lt;sup&gt;2&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;4&lt;sup&gt;lgn&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;2&lt;sup&gt;lgn&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;lg&lt;sup&gt;2&lt;/sup&gt;n&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;n&lt;sup&gt;1/2&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;n&lt;sup&gt;sin n&lt;/sup&gt;&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;0&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The following simple mathematical proofs will serve as confirmation for the above table.
+For every proof, we assume  &lt;em&gt;c&lt;/em&gt; and &lt;em&gt;n&lt;/em&gt; ∈ R, and that each holds 
+∀n | n 	≥ n&lt;sub&gt;0&lt;/sub&gt; with n&lt;sub&gt;0&lt;/sub&gt; ≥ 0.&lt;/p&gt;
+
+&lt;h4 id=&quot;row-1&quot;&gt;Row 1&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-O / Little-o&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;f(n) = 4n&lt;sup&gt;2&lt;/sup&gt; and g(n) = 4&lt;sup&gt;lgn&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;f(n) = O( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Then 0 ≤ &lt;em&gt;f(n)&lt;/em&gt; ≤ &lt;em&gt;cg(n)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;4n&lt;sup&gt;2&lt;/sup&gt; ≤ c4&lt;sup&gt;lgn&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;≤ c(2&lt;sup&gt;2&lt;/sup&gt;)&lt;sup&gt;lgn&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;≤ c2&lt;sup&gt;2lgn&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;≤ c2&lt;sup&gt;lgn&lt;sup&gt;2&lt;/sup&gt;&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;≤ cn&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;So,&lt;/p&gt;
+
+&lt;p&gt;0 ≤ 4n&lt;sup&gt;2&lt;/sup&gt; ≤ cn&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;c&lt;/em&gt; = 4 and &lt;em&gt;n&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; = 1&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n) = O( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We can easily show that little-o does not apply here as Big-O was proved by showing equality 
+of &lt;em&gt;f&lt;/em&gt; and &lt;em&gt;g&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n) ≠ o( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-Omega / Little-omega&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;f(n)&lt;/em&gt; = Ω( g(n) )&lt;/p&gt;
+
+&lt;p&gt;Then 0 ≤ &lt;em&gt;cg(n)&lt;/em&gt; ≤ &lt;em&gt;f(n)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We can easily show this by the equality shown in the Big-O proof.&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n) = Ω( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Similarly to little-o, the equality of &lt;em&gt;f&lt;/em&gt; and &lt;em&gt;g&lt;/em&gt; proves &lt;em&gt;f(n) ≠ ω( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-Theta&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;f(n) = Θ( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Then 0 ≤ &lt;em&gt;c&lt;sub&gt;1&lt;/sub&gt;g(n)&lt;/em&gt; ≤ &lt;em&gt;f(n)&lt;/em&gt; ≤ &lt;em&gt;c&lt;sub&gt;2&lt;/sub&gt;g(n)&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Let  &lt;em&gt;c&lt;sub&gt;1&lt;/sub&gt;&lt;/em&gt; = &lt;em&gt;c&lt;sub&gt;2&lt;/sub&gt;&lt;/em&gt; = 4 and &lt;em&gt;n&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; = 1&lt;/p&gt;
+
+&lt;p&gt;We have, 0 ≤ &lt;em&gt;4n&lt;sup&gt;2&lt;/sup&gt;&lt;/em&gt; ≤ &lt;em&gt;4n&lt;sup&gt;2&lt;/sup&gt;&lt;/em&gt; ≤ &lt;em&gt;4n&lt;sup&gt;2&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n) = Θ( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;row-2&quot;&gt;Row 2&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-O / little-o&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;f(n) = 2&lt;sup&gt;lgn&lt;/sup&gt; and g(n) = lg&lt;sup&gt;2&lt;/sup&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;f(n)&lt;/em&gt; = &lt;em&gt;O( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Then 0 ≤ &lt;em&gt;2&lt;sup&gt;lgn&lt;/sup&gt;&lt;/em&gt; ≤ &lt;em&gt;clg&lt;sup&gt;2&lt;/sup&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;2&lt;sup&gt;lgn&lt;/sup&gt; = n&lt;/p&gt;
+
+&lt;p&gt;lg( 2&lt;sup&gt;lgn&lt;/sup&gt; ) = lg(n)&lt;/p&gt;
+
+&lt;p&gt;lg(n) * lg(2) = lg(n)&lt;/p&gt;
+
+&lt;p&gt;lg(n) = lg(n)&lt;/p&gt;
+
+&lt;p&gt;n = n&lt;/p&gt;
+
+&lt;p&gt;So we have,&lt;/p&gt;
+
+&lt;p&gt;0 ≤ &lt;em&gt;n&lt;/em&gt; ≤ &lt;em&gt;clg&lt;sup&gt;2&lt;/sup&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;But any linear function will grow faster than any logarithmic function given large
+enough values of &lt;em&gt;n&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n)&lt;/em&gt; ≠ &lt;em&gt;O( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;If &lt;em&gt;f(n)&lt;/em&gt; ≠ &lt;em&gt;O( g(n) )&lt;/em&gt; then it is certainly not &lt;em&gt;o( g(n) )&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;That is, &lt;em&gt;f(n)&lt;/em&gt; ≥ &lt;em&gt;cg(n)&lt;/em&gt; where &lt;em&gt;c&lt;/em&gt; = 1 and ∀&lt;em&gt;n&lt;/em&gt; : &lt;em&gt;n&lt;/em&gt; ≥ 16&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n)&lt;/em&gt; ≠ &lt;em&gt;o( g(n) )&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-Omega / little-omega&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Assume &lt;em&gt;f(n)&lt;/em&gt; = Ω( g(n) )&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;c&lt;/em&gt; = 1 and &lt;em&gt;n&lt;sub&gt;0&lt;/sub&gt;&lt;/em&gt; = 16&lt;/p&gt;
+
+&lt;p&gt;Then 0 ≤ &lt;em&gt;lg&lt;sup&gt;2&lt;/sup&gt;n&lt;/em&gt; ≤ &lt;em&gt;n&lt;/em&gt; holds true ∀&lt;em&gt;n&lt;/em&gt; ≥ 16&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n)&lt;/em&gt; = Ω( g(n) )&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Big-Theta&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Because &lt;em&gt;f(n)&lt;/em&gt; ≠ O( &lt;em&gt;g(n)&lt;/em&gt; ), &lt;em&gt;f(n)&lt;/em&gt; cannot be tightly bounded by &lt;em&gt;g(n)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;f(n)&lt;/em&gt; ≠ Θ( &lt;em&gt;g(n)&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;row-3&quot;&gt;Row 3&lt;/h4&gt;
+
+&lt;p&gt;The functions, &lt;em&gt;√n&lt;/em&gt; and &lt;em&gt;n&lt;sup&gt;sin(n)&lt;/sup&gt;&lt;/em&gt;, are not asymptotically comparable because
+the exponent of the sinusoidal function &lt;em&gt;n&lt;sup&gt;sin(n)&lt;/sup&gt;&lt;/em&gt; oscillates between the values 1 and -1.&lt;/p&gt;
+
+&lt;h3 id=&quot;print-binary-tree&quot;&gt;Print Binary Tree&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is a non-recursive pre-order traversal of a binary tree, written in Java.  The traversal
+prints each node using a stack as an auxiliary data structure. We assume the tree consists of
+objects of the class &lt;em&gt;TreeNode&lt;/em&gt;.  We also assume the &lt;em&gt;toString&lt;/em&gt; method has been overridden to
+print that data from the node in a desirable format.&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;BinaryTree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  
+  &lt;span class=&quot;c1&quot;&gt;// Assume TreeNode class, member variables and methods&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;PrintBinaryTreeNodes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;   
+    
+    &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;TreeNode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;treeStack&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;treeStack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+       
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEmpty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;TreeNode&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;treeStack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+         
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;treeStack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+         
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;treeStack&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Analysis&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The algorithm works in &lt;strong&gt;O&lt;/strong&gt;(n) time.  The while loop takes a TreeNode as the root and prints it.
+Each subsequent node is pushed on the stack.  For a pre-order traversal, the left child is pushed
+after the right, given the first-in last-out nature of a stack. So, every right sub-tree is appended
+until all left sub-roots have been popped and printed.  The stack then maintains the order of 
+visitation within the tree.  Thus, we have &lt;em&gt;n&lt;/em&gt; nodes entering the stack, with each node being 
+operated on in &lt;strong&gt;O&lt;/strong&gt;(1) time.&lt;/p&gt;
+
+&lt;p&gt;∴ PrintBinaryTreeNodes operates in &lt;strong&gt;O&lt;/strong&gt;(n) time.&lt;/p&gt;
+
+&lt;h3 id=&quot;merge-insertion-sort&quot;&gt;Merge Insertion Sort&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The idea for a hybridization of merge sort and insertion sort depends on the fact that, given
+a small enough list size, insertion sort outperforms merge sort.  Insertion sort can also sort
+in-place, giving it an advantage when implemented on most machines.  The idea then is to coarsen 
+the leaves of the merge sort recursion tree by calling insertion sort when the list size becomes
+sufficiently small.  We will show the time-complexity in two parts, then find a bound for values
+ of &lt;em&gt;k&lt;/em&gt;…&lt;/p&gt;
+
+&lt;h5 id=&quot;claim&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;Insertion sort can sort &lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt; sub-lists, each of length &lt;em&gt;k&lt;/em&gt;, in Θ(&lt;em&gt;nk&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h5 id=&quot;proof&quot;&gt;Proof:&lt;/h5&gt;
+
+&lt;p&gt;Let us take a set of &lt;em&gt;n&lt;/em&gt; elements and split it into &lt;em&gt;k&lt;/em&gt; subsets of length &lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We are then sorting a set of &lt;em&gt;k&lt;/em&gt; elements &lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt; times, or…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\frac{n}{k}&amp;space;\sum_{i=2}^{k}&amp;space;i&amp;space;=&amp;space;\frac{n}{k}&amp;space;\sum_{j=1}^{k}&amp;space;(j-1)&quot; title=&quot;\frac{n}{k} \sum_{i=2}^{k} i = \frac{n}{k} \sum_{j=1}^{k} (j-1)&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?=&amp;space;\frac{n}{k}&amp;space;*&amp;space;\frac{k(k&amp;plus;1)}{2}-1&quot; title=&quot;= \frac{n}{k} * \frac{k(k+1)}{2}-1&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?=&amp;space;\frac{n(k&amp;plus;1)}{2}-1&quot; title=&quot;= \frac{n(k+1)}{2}-1&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?=&amp;space;\Theta(nk)&quot; title=&quot;= \Theta(nk)&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In terms of a recursion tree, merge sort originally bottoms out when the length of the set is 1. 
+Instead, we are now bottoming out when the set has a length of size &lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;, or…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?T(n)&amp;space;=&amp;space;2T(\frac{n}{2k})&amp;space;&amp;plus;&amp;space;cn&quot; title=&quot;T(n) = 2T(\frac{n}{2k}) + cn&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus, the height of the hybridized recursion tree is &lt;em&gt;lg&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;) + 1, with a cost of &lt;em&gt;cn&lt;/em&gt; at 
+each level.&lt;/p&gt;
+
+&lt;p&gt;So, T(n) = &lt;em&gt;cn&lt;/em&gt; ( &lt;em&gt;lg&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;) + 1 )&lt;/p&gt;
+
+&lt;p&gt;= Θ( &lt;em&gt;n&lt;/em&gt; &lt;em&gt;lg&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;) )&lt;/p&gt;
+
+&lt;p&gt;Putting these two results together, we have the total cost of our algorithm as the sum of the
+constituent parts…&lt;/p&gt;
+
+&lt;p&gt;Θ( &lt;em&gt;nk&lt;/em&gt; + &lt;em&gt;n&lt;/em&gt; &lt;em&gt;lg&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;k&lt;/em&gt;) )&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A bound on the value of &lt;em&gt;k&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;It is easy to see that if &lt;em&gt;k&lt;/em&gt; were larger than O(&lt;em&gt;lgn&lt;/em&gt;) than the value of &lt;em&gt;k&lt;/em&gt; would become more
+than a constant factor.&lt;/p&gt;
+
+&lt;p&gt;This can be shown by substituting the bound on &lt;em&gt;k&lt;/em&gt; into our hybrid’s complexity equation, and as 
+result, simplifying back to the original time-complexity for merge sort.&lt;/p&gt;
+
+&lt;p&gt;Let &lt;em&gt;k&lt;/em&gt; = O( &lt;em&gt;lgn&lt;/em&gt; ) = &lt;em&gt;lgn&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Θ( &lt;em&gt;n lgn&lt;/em&gt; + &lt;em&gt;n&lt;/em&gt; &lt;em&gt;lg&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;lgn&lt;/em&gt;) )&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;n&lt;/em&gt; / &lt;em&gt;lgn&lt;/em&gt; must certainly grow slower than &lt;em&gt;n&lt;/em&gt;, thus the leading expression dominates.&lt;/p&gt;
+
+&lt;p&gt;This results in Θ( &lt;em&gt;n lgn&lt;/em&gt; ).&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;irl&quot;&gt;IRL&lt;/h4&gt;
+
+&lt;p&gt;Constants pertaining to the particular instances of the algorithms, the languages they are written
+in, and the machines they will be running on all affect performance.  As such, using our analytical
+findings in conjunction with performance testing would give us an optimal solution for &lt;em&gt;k&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;We could simply run a series of tests, setting the value of &lt;em&gt;k&lt;/em&gt; to the upper bound we found through
+analysis.  We then run the sort, decrementing the value of &lt;em&gt;k&lt;/em&gt; with each test case.  After which,
+we then analyze the data looking for the optimal value for the length of the sub-lists.&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-03&quot;&gt;Problem Set 03&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;expected-length-of-a-coding-scheme&quot;&gt;Expected Length of a Coding Scheme&lt;/h3&gt;
+
+&lt;p&gt;This simple exercise will look at the expected bit-length of 3 character encoding schemes.
+The set of characters for all of these cases is: {A, B, C, D, E}.  The first scheme uses a 3-bit 
+encoding for all 5 characters, i.e.,&lt;/p&gt;
+
+&lt;p&gt;A =&amp;gt; 001&lt;/p&gt;
+
+&lt;p&gt;B =&amp;gt; 010&lt;/p&gt;
+
+&lt;p&gt;C =&amp;gt; 011&lt;/p&gt;
+
+&lt;p&gt;D =&amp;gt; 100&lt;/p&gt;
+
+&lt;p&gt;E =&amp;gt; 101&lt;/p&gt;
+
+&lt;p&gt;The characters in our set occur with the following probabilities:&lt;/p&gt;
+
+&lt;p&gt;Pr[A] = 0.3 ; Pr[B] = 0.3 ; Pr[C] = 0.2 ; Pr[D] = 0.1 ; Pr[E] = 0.1&lt;/p&gt;
+
+&lt;p&gt;Let X&lt;sub&gt;n&lt;/sub&gt; be the expected length of encoding &lt;em&gt;n&lt;/em&gt; letters&lt;/p&gt;
+
+&lt;p&gt;Then X&lt;sub&gt;n&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt; (3Pr[A] + 3Pr[B] + 3Pr[C] + 3Pr[D] + 3Pr[E])&lt;/p&gt;
+
+&lt;p&gt;= n (3(0.3) + 3(0.3) + 3(0.2) + 3(0.1) + 3(0.1))&lt;/p&gt;
+
+&lt;p&gt;= 3n&lt;/p&gt;
+
+&lt;p&gt;We now evaluate using the same probability distribution, but a different encoding length:&lt;/p&gt;
+
+&lt;p&gt;A =&amp;gt; 0&lt;/p&gt;
+
+&lt;p&gt;B =&amp;gt; 10&lt;/p&gt;
+
+&lt;p&gt;C =&amp;gt; 110&lt;/p&gt;
+
+&lt;p&gt;D =&amp;gt; 1110&lt;/p&gt;
+
+&lt;p&gt;E =&amp;gt; 1111&lt;/p&gt;
+
+&lt;p&gt;We will set up the following scheme:&lt;/p&gt;
+
+&lt;p&gt;A : 0 : A.length = 1 : Pr[A] = 0.3&lt;/p&gt;
+
+&lt;p&gt;B : 10 : B.length = 2 : Pr[B] = 0.3&lt;/p&gt;
+
+&lt;p&gt;C : 110 : C.length = 3 : Pr[C] = 0.2&lt;/p&gt;
+
+&lt;p&gt;D : 1110 : D.length = 4 : Pr[D] = 0.1&lt;/p&gt;
+
+&lt;p&gt;E : 1111 : E.length = 5 : Pr[E] = 0.1&lt;/p&gt;
+
+&lt;p&gt;Again we let X&lt;sub&gt;n&lt;/sub&gt; be the expected length of encoding &lt;em&gt;n&lt;/em&gt; letters…&lt;/p&gt;
+
+&lt;p&gt;X&lt;sub&gt;n&lt;/sub&gt; = &lt;em&gt;n&lt;/em&gt; (0.3 + 2(0.3) + 3(0.2) + 4(0.1) + 4(0.1))&lt;/p&gt;
+
+&lt;p&gt;= 2.3&lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;For the final encoding we use the same encoding length, but the probability distribution has changed to…&lt;/p&gt;
+
+&lt;p&gt;Pr[A] = 0.5 ; Pr[B] = 0.2 ; Pr[C] = 0.2 ; Pr[D] = 0.05 ; Pr[E] = 0.05&lt;/p&gt;
+
+&lt;p&gt;With this scheme we have the equation…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;n&lt;/em&gt; (0.3 + 2(0.3) + 3(0.2) + 4(0.05) + 4(0.05))&lt;/p&gt;
+
+&lt;p&gt;= 1.9&lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;hashing-with-chaining&quot;&gt;Hashing with Chaining&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We now consider a hash table with &lt;em&gt;m&lt;/em&gt; slots that uses chaining for collision resolution.
+With the table initially empty, we will find the probability that a chain of size &lt;em&gt;k&lt;/em&gt; exists
+after &lt;em&gt;k&lt;/em&gt; insertions.&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-1&quot;&gt;Proof:&lt;/h5&gt;
+
+&lt;p&gt;X&lt;sub&gt;k&lt;/sub&gt; = After &lt;em&gt;k&lt;/em&gt; keys, there is a chain of size &lt;em&gt;k&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;= I { &lt;em&gt;k&lt;/em&gt; &lt;em&gt;h&lt;/em&gt;( &lt;em&gt;k&lt;/em&gt; ) = n } , where &lt;em&gt;n&lt;/em&gt; is some slot in the table.&lt;/p&gt;
+
+&lt;p&gt;The probability of a key mapping to some slot is 1 / &lt;em&gt;m&lt;/em&gt;.  The following &lt;em&gt;k&lt;/em&gt; - 1 keys must
+also map to the same slot.&lt;/p&gt;
+
+&lt;p&gt;∴ X&lt;sub&gt;k&lt;/sub&gt; = 1 / &lt;em&gt;m&lt;/em&gt;&lt;sup&gt;k - 1&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Working on a way to format hash tables in an aesthetically pleasing way, until then this
+section will be somewhat bare…&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;skip-lists&quot;&gt;Skip Lists&lt;/h3&gt;
+&lt;p&gt;(&lt;em&gt;coming soon! Again with the aesthetics…&lt;/em&gt;)&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-04&quot;&gt;Problem Set 04&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;In this problem set we will tackle a few recurrence relations using the Master
+Method.  For one of those relations, we will use our findings from the MM to
+use as our guess within the substitution method.  Where will see that 
+sometimes less really is more!&lt;/p&gt;
+
+&lt;p&gt;After, we’ll take a deeper look into binary search trees. We will first prove
+a basic lemma by showing that the individual parts are true.  Then we’ll run
+through an exercise in modifying a deletion algorithm.  Finishing up with an 
+algorithm to construct a balanced binary search tree along with a time
+complexity analysis.&lt;/p&gt;
+
+&lt;h3 id=&quot;master-method&quot;&gt;Master Method&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;T(&lt;em&gt;n&lt;/em&gt;) = 2 T( &lt;em&gt;n&lt;/em&gt; / 4 ) + √&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a&lt;/em&gt; = 2 ; &lt;em&gt;b&lt;/em&gt; = 4 ; &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;) = &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;1/2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;But &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;log&lt;sub&gt;4&lt;/sub&gt;2&lt;/sup&gt; = &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;1/2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;So, in the relation we can express &lt;em&gt;f&lt;/em&gt; as an element of the set
+Θ( n&lt;sup&gt;log&lt;sub&gt;b&lt;/sub&gt;a&lt;/sup&gt; ).  By case 2 of the master theorem,
+this tells us that T(&lt;em&gt;n&lt;/em&gt;) = Θ(√&lt;em&gt;n&lt;/em&gt; * lg&lt;em&gt;n&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T(&lt;em&gt;n&lt;/em&gt;) = 3 T( &lt;em&gt;n&lt;/em&gt; / 9 ) + &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a&lt;/em&gt; = 3 ; &lt;em&gt;b&lt;/em&gt; = 9 ; &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;) = &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;n&lt;/em&gt;&lt;sup&gt;log&lt;sub&gt;9&lt;/sub&gt;3&lt;/sup&gt; = &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;1/2&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;So, we have the cost at each level of the recurrence tree as an element of the set 
+Ω( &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;1/2 + ε&lt;/sup&gt; ) where ε = 5 / 2.&lt;/p&gt;
+
+&lt;p&gt;When using a lower bound on our cost function , we must perform a check according to 
+the method:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a&lt;/em&gt; &lt;em&gt;f&lt;/em&gt; ( &lt;em&gt;n&lt;/em&gt; / &lt;em&gt;b&lt;/em&gt; ) ≤ &lt;em&gt;c&lt;/em&gt; &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;) for some &lt;em&gt;c&lt;/em&gt; &amp;#60; 1 and 
+sufficiently large values of &lt;em&gt;n&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;3 ( n / 9 )&lt;sup&gt;3&lt;/sup&gt; ≤ &lt;em&gt;c&lt;/em&gt; &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;3 ( n / 3&lt;sup&gt;2&lt;/sup&gt; )&lt;sup&gt;3&lt;/sup&gt; ≤&lt;/p&gt;
+
+&lt;p&gt;( 3n&lt;sup&gt;3&lt;/sup&gt; / 3&lt;sup&gt;6&lt;/sup&gt; ) ≤&lt;/p&gt;
+
+&lt;p&gt;( n&lt;sup&gt;3&lt;/sup&gt; / 3&lt;sup&gt;5&lt;/sup&gt; ) ≤ &lt;em&gt;c&lt;/em&gt; &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;We can arbitrarily choose &lt;em&gt;c&lt;/em&gt; = 1 / 3&lt;/p&gt;
+
+&lt;p&gt;∴ T(&lt;em&gt;n&lt;/em&gt;) = Θ( &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;3&lt;/sup&gt; )&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T(&lt;em&gt;n&lt;/em&gt;) = 7 T( &lt;em&gt;n&lt;/em&gt; / 3 ) + &lt;em&gt;n&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;a&lt;/em&gt; = 7 ; &lt;em&gt;b&lt;/em&gt; = 3 ; &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;) = &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;n&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; &amp;#62; &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;So, &lt;em&gt;f&lt;/em&gt; (&lt;em&gt;n&lt;/em&gt;) = O (n&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7 - ε&lt;/sup&gt;) for some constant ε &amp;#62; 0&lt;/p&gt;
+
+&lt;p&gt;∴ T(&lt;em&gt;n&lt;/em&gt;) = Θ( n&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; ) by case 3 of the Master Theorem.&lt;/p&gt;
+
+&lt;h3 id=&quot;substitution&quot;&gt;Substitution&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here, we will use the above result from the relation…&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;T(&lt;em&gt;n&lt;/em&gt;) = 7 T( &lt;em&gt;n&lt;/em&gt; / 3 ) + &lt;em&gt;n&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Guess: T(&lt;em&gt;n&lt;/em&gt;) = Θ( n&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; )&lt;/p&gt;
+
+&lt;p&gt;We must show that 0 ≤ c&lt;em&gt;n&lt;/em&gt;&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; ≤ T(&lt;em&gt;n&lt;/em&gt;) 	≤ 
+cn&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt;&lt;/p&gt;
+
+&lt;p&gt;0 ≤ c( &lt;em&gt;n&lt;/em&gt; / 3 )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt; ≤ T(&lt;em&gt;n&lt;/em&gt;) 	≤ 
+c( &lt;em&gt;n&lt;/em&gt; / 3 )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;0 ≤ c( &lt;em&gt;n&lt;/em&gt; )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt; ≤ T(&lt;em&gt;n&lt;/em&gt;) 	≤ 
+c( &lt;em&gt;n&lt;/em&gt; )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This is where our attempt breaks down as there is no way to remove &lt;em&gt;n&lt;/em&gt; from
+the inequality as to match our guess.&lt;/p&gt;
+
+&lt;p&gt;Let’s instead guess T(n) = Θ( n&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; ) - &lt;em&gt;dn&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;0 ≤ c( &lt;em&gt;n&lt;/em&gt; )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt; - &lt;em&gt;dn&lt;/em&gt; ≤ T(&lt;em&gt;n&lt;/em&gt;) ≤ 
+c( &lt;em&gt;n&lt;/em&gt; )&lt;sup&gt;log&lt;sub&gt;3&lt;/sub&gt;7&lt;/sup&gt; + &lt;em&gt;n&lt;/em&gt; - &lt;em&gt;dn&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Thus when &lt;em&gt;d&lt;/em&gt; = 1 our inequality holds.&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h3 id=&quot;more-fun-with-binary-search-trees&quot;&gt;More Fun with Binary Search Trees&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;lemmas&quot;&gt;Lemmas&lt;/h4&gt;
+&lt;p&gt;The lemma to be proven:&lt;/p&gt;
+
+&lt;p&gt;If a node X in a binary search tree has two children, then its successor S has no left
+child and its predecessor P has no right child.&lt;/p&gt;
+
+&lt;h5 id=&quot;claim-1&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;The successor S cannot be an ancestor or cousin of X&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-2&quot;&gt;Proof:&lt;/h5&gt;
+&lt;p&gt;Suppose that the successor S is an ancestor or cousin of X.&lt;/p&gt;
+
+&lt;p&gt;S, the successor is an ancestor, but S must also reside in the minimum of X’s right subtree.
+Surely this is impossible!  Consider now that S is a cousin of X, which means it resides at 
+the same level with a different parent.  However, this implies X and S and not separated
+by an intermediate node because S is X’s successor, but two nodes that are cousins are surely
+separated by a common ancestor above the parent!&lt;/p&gt;
+
+&lt;p&gt;∴	our hypothesis is a contradiction.&lt;/p&gt;
+
+&lt;h5 id=&quot;claim-2&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;if X has two children, the successor S must then be contained in it’s right sub tree such 
+that the successor is the key with th minimum value.&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-3&quot;&gt;Proof:&lt;/h5&gt;
+&lt;p&gt;Suppose not, that is suppose X’s successor is not located at the minimum of X’s right
+subtree.  There are only two other positions then: S is the parent of X, or S is somewhere in
+X’s left subtree.&lt;/p&gt;
+
+&lt;p&gt;Case 1: S is the parent of X.  We know that X has two children. So then S would be a
+successor to multiple nodes, surely this contradicts the structure of a binary search tree.&lt;/p&gt;
+
+&lt;p&gt;Case 2: S is somewhere in X’s left subtree.  If this were the case then S would both precede
+and succeed X, but this is impossible!&lt;/p&gt;
+
+&lt;p&gt;∴	our negated hypothesis is a contradiction.&lt;/p&gt;
+
+&lt;h5 id=&quot;claim-3&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;S cannot have a left child.&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-4&quot;&gt;Proof:&lt;/h5&gt;
+&lt;p&gt;Again, suppose not.  That is, suppose S does have a left child.  We showed
+before that S is the minimum of X’s right sub tree.  If S has a left child that child is 
+the minimum or else contains the minimum, but if S is the successor then it is 
+also the minimum. This is impossible! There is only one minimum!&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;deletion&quot;&gt;Deletion&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The pseudocode for Tree-Delete (pg.298 CLRS)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;TREE-DELETE(T, z) 
+  if z.left == NIL
+    Transplant(T, z, z.right)
+  else if z.right == NIL
+    Transplant(T, z, z.left)
+  else
+    y = Tree_Minimum(z.right)
+    if y.p != Z
+      Transplant(T, y, y.right)
+      y.right = z.right
+      y.right.p = y
+    Transplant(T, z, y)
+    y.left = z.left
+    y.left.p = y  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The above pseudocode relies on the logic of the above lemma when finding the successor node to 
+replace the deleted node in the event that the right sub tree is not NULL.&lt;/p&gt;
+
+&lt;p&gt;The following is a modification of the foregoing code using the predecessor rather than the
+successor…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;TREE-DELETE(T, z) 
+  if z.left == NIL
+    Transplant(T, z, z.right)
+  else if z.right == NIL
+    Transplant(T, z, z.left)
+  else
+    y = Tree_Minimum(z.left)
+    if y.p != Z
+      Transplant(T, y, y.left)
+      y.left = z.left
+      y.left.p = y
+    Transplant(T, z, y)
+    y.right = z.right
+    y.right.p = y  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;As one can easily see, the symmetry of the binary tree structure also us to take a ‘mirror image,’
+so to speak.&lt;/p&gt;
+
+&lt;h4 id=&quot;constructing-balanced-trees&quot;&gt;Constructing Balanced Trees&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Binary trees can become linear if special care is not taken in regard to how a particular 
+implementation of the tree is built.  We focus on &lt;em&gt;balance&lt;/em&gt; here.  That is, we recursively define a 
+balanced binary tree with balanced binary sub trees.  Here we assume a sorted array is passed as
+the actual parameter.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;BalancedBinaryTree(A, start, end)
+  if start &amp;gt; end
+    return NIL
+    
+  middle = floor((start + end) / 2)
+  node = A[middle]
+  
+  node.left = BalancedBinaryTree(A, start, middle - 1)
+  node.right = BalancedBinaryTree(A, middle + 1, end)
+  
+  return node
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The two recurrence calls in the above code split the problem in to two parts.
+Each subsequent problem is half the size of the array passed as the parameter.
+A constant cost at each level of recursion is required to compute the middle
+variable and assign pointers between nodes.&lt;/p&gt;
+
+&lt;p&gt;Thus we have T(&lt;em&gt;n&lt;/em&gt;) = 2 T( &lt;em&gt;n&lt;/em&gt; / 2 ) + &lt;em&gt;c&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The recursion is obviously dominated by the leaves…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;c&lt;/em&gt; = O ( &lt;em&gt;n&lt;/em&gt;&lt;sup&gt;lg 2 - ε&lt;/sup&gt; ) where ε = 1&lt;/p&gt;
+
+&lt;p&gt;∴	T(&lt;em&gt;n&lt;/em&gt;) = Θ(&lt;em&gt;n&lt;/em&gt;) by case 1 of the Master Theorem&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-05&quot;&gt;Problem Set 05&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Things are picking up momentum and getting a bit more interesting in problem set 05.  We’ll
+be taking an in-depth look into d-ary heaps.  This will include diving into a height analysis,
+along with implementations of &lt;em&gt;Extract_Max&lt;/em&gt; and &lt;em&gt;Insert&lt;/em&gt;, with corresponding analyses for each.&lt;/p&gt;
+
+&lt;p&gt;We then pay a small homage to Dijkstra with an implementation of a &lt;em&gt;3_Way_Quicksort&lt;/em&gt;.  A powerful
+approach in the respect that such an algorithm addresses the weakness Quicksort has when 
+it comes to sorted, reverse sorted, or nearly sorted inputs.&lt;/p&gt;
+
+&lt;h3 id=&quot;d-ary-heaps&quot;&gt;D-Ary Heaps&lt;/h3&gt;
+&lt;p&gt;To start things off, let’s take a look at how one would represent a d-ary heap in an array.
+We can accomplish this by verifying the following two formulas:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;j&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt;-&lt;em&gt;child&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt;, &lt;em&gt;j&lt;/em&gt; ) = &lt;em&gt;d&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt; - 1 ) + &lt;em&gt;j&lt;/em&gt; + 1&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;D_Ary_Parent&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt; ) = &lt;em&gt;floor&lt;/em&gt; ( ( &lt;em&gt;i&lt;/em&gt; - 2 ) / &lt;em&gt;d&lt;/em&gt; ) + 1&lt;/p&gt;
+
+&lt;p&gt;We will verify by way of a kind of inverse identity…&lt;/p&gt;
+
+&lt;h5 id=&quot;claim-4&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;D_Ary_Parent&lt;/em&gt; ( &lt;em&gt;j&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt;-&lt;em&gt;child&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt;, &lt;em&gt;j&lt;/em&gt; ) ) = &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-5&quot;&gt;Proof:&lt;/h5&gt;
+&lt;p&gt;Let us assume we are considering the first child so that &lt;em&gt;j&lt;/em&gt; = 1&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;floor&lt;/em&gt; ( [ &lt;em&gt;d&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt; - 1 ) + 1 + 1 - 2 ] / &lt;em&gt;d&lt;/em&gt; ) + 1 = &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;= [ &lt;em&gt;d&lt;/em&gt; ( &lt;em&gt;i&lt;/em&gt; - 1 ) ] / &lt;em&gt;d&lt;/em&gt; + 1&lt;/p&gt;
+
+&lt;p&gt;= &lt;em&gt;i&lt;/em&gt; - 1 + 1&lt;/p&gt;
+
+&lt;p&gt;= &lt;em&gt;i&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;height-of-a-d-ary-heap&quot;&gt;Height of a d-ary heap&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The number of nodes in a completely filled &lt;em&gt;i&lt;/em&gt; &lt;sup&gt;th&lt;/sup&gt; level of some d-ary heap
+would of course be &lt;em&gt;d &lt;sup&gt;i&lt;/sup&gt;&lt;/em&gt;.  Let us agree that the last filled level is the
+&lt;em&gt;k &lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt; level.  The number of nodes must then be the sum from level 0 to level
+&lt;em&gt;k&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Or, &lt;em&gt;d &lt;sup&gt;0&lt;/sup&gt; + d &lt;sup&gt;1&lt;/sup&gt; + d &lt;sup&gt;2&lt;/sup&gt; + … + d &lt;sup&gt;k&lt;/sup&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://latex.codecogs.com/gif.latex?=&amp;space;\sum_{i=0}^{k}&amp;space;d^i&quot; title=&quot;= \sum_{i=0}^{k} d^i&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+Which is of course the simple geometric series…
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?=\frac{d^{k+1}-1}{d-1}&quot; title=&quot;=\frac{d^{k+1}-1}{d-1}&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The last node must reside in the filled level, or else it exists in the succeeding partially
+filled level, &lt;em&gt;k&lt;/em&gt; + 1.&lt;/p&gt;
+
+&lt;p&gt;Our final node, let’s call it &lt;em&gt;n&lt;/em&gt;, can be represented with the following inequality…&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?\frac{d^{k&amp;plus;1}-1}{d-1}&amp;space;\leq&amp;space;n&amp;lt;&amp;space;\frac{d^{k&amp;plus;2}-1}{d-1}&quot; title=&quot;\frac{d^{k+1}-1}{d-1} \leq n&amp;lt; \frac{d^{k+2}-1}{d-1}&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?d^{k&amp;plus;1}-1\leq&amp;space;n(d-1)&amp;lt;&amp;space;d^{k&amp;plus;2}-1&quot; title=&quot;d^{k+1}-1\leq n(d-1)&amp;lt; d^{k+2}-1&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?d^{k&amp;plus;1}\leq&amp;space;n(d-1)&amp;plus;1&amp;lt;&amp;space;d^{k&amp;plus;2}&quot; title=&quot;d^{k+1}\leq n(d-1)+1&amp;lt; d^{k+2}&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?k&amp;plus;1\leq&amp;space;log_d(n(d-1)&amp;plus;1)&amp;lt;&amp;space;k&amp;plus;2&quot; title=&quot;k+1\leq log_d(n(d-1)+1)&amp;lt; k+2&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;img src=&quot;https://latex.codecogs.com/gif.latex?k\leq&amp;space;log_d(n(d-1)&amp;plus;1)-1&amp;lt;&amp;space;k&amp;plus;1&quot; title=&quot;k\leq log_d(n(d-1)+1)-1&amp;lt; k+1&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;The inequality holds for &lt;em&gt;k&lt;/em&gt;, but in the case of a partial level we would take the ceiling
+of the logarithm because at least &lt;em&gt;k&lt;/em&gt; + 1 levels are needed as levels are discrete.&lt;/p&gt;
+
+&lt;p&gt;∴	The height of a d-ary heap of &lt;em&gt;n&lt;/em&gt; elements is…&lt;/p&gt;
+
+&lt;p&gt;⌈ log&lt;sub&gt;d&lt;/sub&gt; ( &lt;em&gt;n&lt;/em&gt; ( &lt;em&gt;d&lt;/em&gt; - 1 ) + 1 ) ⌉ - 1&lt;/p&gt;
+
+&lt;p&gt;Using the change of base formula this can be seen as…&lt;/p&gt;
+
+&lt;p&gt;Θ	( &lt;em&gt;lg&lt;/em&gt; ( &lt;em&gt;nd&lt;/em&gt; ) )&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h4 id=&quot;extract_max&quot;&gt;Extract_Max&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;To implement extract max on a d-ary heap would remain the same as an implementation
+on a binary heap, except for an alteration to the &lt;em&gt;Max_Heapify&lt;/em&gt; sub-routine.  The code
+would be altered to simply find the largest element &lt;em&gt;j&lt;/em&gt;, such that…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;j&lt;/em&gt; = &lt;em&gt;max&lt;/em&gt; ( A[ &lt;em&gt;i&lt;/em&gt; ], the children of A[ &lt;em&gt;i&lt;/em&gt; ] )&lt;/p&gt;
+
+&lt;p&gt;Therefore each node is compared to it’s &lt;em&gt;d&lt;/em&gt; children&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;for j = 1 to d 
+  max = A[i]
+  if A[j] &amp;gt; A[i]
+    max = A[j]
+return max
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This results in &lt;em&gt;Extract_Max&lt;/em&gt;’s run-time being Θ ( &lt;em&gt;d lgn&lt;/em&gt; )&lt;/p&gt;
+
+&lt;h4 id=&quot;insert&quot;&gt;Insert&lt;/h4&gt;
+&lt;p&gt;This particular implementation would also remain the same as a binary heap.  That is,
+the key would be inserted at the last position of the heap, then the &lt;em&gt;Heap_Increase_Key&lt;/em&gt;
+sub-routine would be called on the newly inserted key.  If a key were greater than the
+parent, then it is also surely greater than it’s siblings.  Thus the implementation does
+not change.  The key is swapped with it’s corresponding parent until the correct position
+in the heap is found.  In the worst case the new key belongs at the root.&lt;/p&gt;
+
+&lt;p&gt;∴ &lt;em&gt;Insert&lt;/em&gt; = Θ ( &lt;em&gt;h&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;= Θ ( &lt;em&gt;lg&lt;/em&gt; ( &lt;em&gt;nd&lt;/em&gt; ) )&lt;/p&gt;
+
+&lt;h3 id=&quot;3-way-quicksort&quot;&gt;3 Way Quicksort&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;See also &lt;a href=&quot;https://en.wikipedia.org/wiki/Dutch_national_flag_problem&quot;&gt;Dutch National Flag Problem&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is a recursive implementation written in python…&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;def 3_Way_Partition(A, p, r):
+  e, g, q = p, r, A[r] 
+  i = e
+  
+  while i &amp;lt; r:
+    if A[i] &amp;lt; q:
+      A[i], A[e] = A[e], A[i]
+      e += 1
+    elif A[i] &amp;gt; q:
+      A[i], A[g] = A[g], A[i]
+      g -= 1
+      i -= 1
+    i += 1
+  return e, g
+  
+def 3_Way_Quicksort(A, p, r):
+  if p &amp;lt; r:
+    e, g = 3_Way_Partition
+    3_Way_Quicksort(A, p, e - 1)
+    3_Way_Quicksort(A, g + 1, r)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If we assume a balanced partitioning of &lt;em&gt;3_Way_Quicksort&lt;/em&gt;, we still have 2 
+sub-problems each half the size of the original.  For random valued keys as the
+partition A[ &lt;em&gt;e&lt;/em&gt;..&lt;em&gt;g&lt;/em&gt; ] could be empty with a high probability.&lt;/p&gt;
+
+&lt;p&gt;Thus, T( &lt;em&gt;n&lt;/em&gt; ) = 2 T ( &lt;em&gt;n&lt;/em&gt; / 2 ) + Θ ( &lt;em&gt;n&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;= Θ ( &lt;em&gt;n lgn&lt;/em&gt; ) by the Master Theorem&lt;/p&gt;
+
+&lt;p&gt;Now in the case of &lt;em&gt;n&lt;/em&gt; identical items, &lt;em&gt;3_Way_Partition&lt;/em&gt; is adaptive as it will 
+iterate over the &lt;em&gt;n&lt;/em&gt; elements only one time.  By doing this it creates a partition
+where &lt;em&gt;p&lt;/em&gt; = &lt;em&gt;e&lt;/em&gt; and &lt;em&gt;g&lt;/em&gt; = &lt;em&gt;r&lt;/em&gt;.  In other words, the conditional base case of the 
+recursion is true for a single call to &lt;em&gt;3_Way_Quicksort&lt;/em&gt;, namely the initial call.&lt;/p&gt;
+
+&lt;p&gt;T( &lt;em&gt;n&lt;/em&gt; ) = 0 T ( &lt;em&gt;n&lt;/em&gt; / 2 ) + Θ ( &lt;em&gt;n&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;= Θ ( &lt;em&gt;n&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-06&quot;&gt;Problem Set 06&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We have past the half way point and find ourselves dealing with ways to escape the clutches
+of O(&lt;em&gt;nlgn&lt;/em&gt;) comparison based sorting.  After that, we work with red-black trees and they’re
+equivalent (2, 4) representations.&lt;/p&gt;
+
+&lt;h3 id=&quot;sorting-large-numbers&quot;&gt;Sorting Large Numbers&lt;/h3&gt;
+&lt;p&gt;What we are faced with is the task of sorting &lt;em&gt;n&lt;/em&gt; integers in the range of 0 to 
+&lt;em&gt;n&lt;/em&gt; &lt;sup&gt;4&lt;/sup&gt; - 1 in O( &lt;em&gt;n&lt;/em&gt; ) time.&lt;/p&gt;
+
+&lt;p&gt;Let’s look at &lt;em&gt;Counting_Sort&lt;/em&gt; as an option…&lt;/p&gt;
+
+&lt;p&gt;From CLRS (pg. 195)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;Counting_Sort(A, b, k)
+  let C[0..k] be a new array
+  for i = 0 to k
+    C[i] = 0
+  for j = 1 to A.length
+    C[A[j]] = C[A[j]] + 1
+.
+.
+.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We need only examine the first for loop to see that &lt;em&gt;Counting_Sort&lt;/em&gt; does not accomplish our goal.
+The loop iterates &lt;em&gt;i&lt;/em&gt; = 0 to &lt;em&gt;k&lt;/em&gt;, menaing Θ( &lt;em&gt;k&lt;/em&gt; ) time.  The overall time remains as 
+Θ( &lt;em&gt;n&lt;/em&gt; + &lt;em&gt;k&lt;/em&gt; ), but &lt;em&gt;k&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; &lt;sup&gt;4&lt;/sup&gt; - 1.&lt;/p&gt;
+
+&lt;p&gt;Thus the best run time that &lt;em&gt;Counting_Sort&lt;/em&gt; can achieve is Θ( &lt;em&gt;n&lt;/em&gt; &lt;sup&gt;4&lt;/sup&gt; ).  Which
+certainly does not achieve our goal of a linear sorting time.&lt;/p&gt;
+
+&lt;p&gt;Let’s instead take a look into &lt;em&gt;Radix_Sort&lt;/em&gt;…&lt;/p&gt;
+
+&lt;p&gt;From CLRS (pg. 198)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;Radix_Sort(A, d)
+  for i = 1 to d
+    use a stable sort to sort array A on digit i
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Again, our problem consists of &lt;em&gt;n&lt;/em&gt; integers ranging in values from 0 to &lt;em&gt;n&lt;/em&gt; &lt;sup&gt;4&lt;/sup&gt; - 1.
+Then we have &lt;em&gt;d&lt;/em&gt; = log&lt;sub&gt;k&lt;/sub&gt;( &lt;em&gt;n&lt;/em&gt; ) digits.  In the worst case &lt;em&gt;d&lt;/em&gt; is not constant and thus
+with base-10 counting, &lt;em&gt;k&lt;/em&gt; is in the domain [0, 9].&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Radix_Sort&lt;/em&gt; = Θ ( log&lt;sub&gt;k&lt;/sub&gt;( &lt;em&gt;n&lt;/em&gt; )( &lt;em&gt;n&lt;/em&gt; + 10) )&lt;/p&gt;
+
+&lt;p&gt;= Θ( &lt;em&gt;n lgn&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;We need to make a slight change to our representation of the integers comprising our array
+if we wish to achieve escape velocity, if you will, from the Θ( &lt;em&gt;n lgn&lt;/em&gt; ) bound.&lt;/p&gt;
+
+&lt;p&gt;The issue with an unmodified &lt;em&gt;Radix_Sort&lt;/em&gt; is the logarithmic term corresponding to the amount
+of digits to loop through.  In the foregoing attempt we used base-10 digits, thus &lt;em&gt;k&lt;/em&gt; = 10.
+and &lt;em&gt;d&lt;/em&gt; = log&lt;sub&gt;k&lt;/sub&gt;( &lt;em&gt;n&lt;/em&gt; ).  Instead, if we let &lt;em&gt;k&lt;/em&gt; = &lt;em&gt;n&lt;/em&gt; then our &lt;em&gt;n&lt;/em&gt; integers are
+represented as base-&lt;em&gt;n&lt;/em&gt; giving us…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Modified_Radix_Sort&lt;/em&gt; = Θ( log&lt;sub&gt;n&lt;/sub&gt;( &lt;em&gt;n&lt;/em&gt; )( &lt;em&gt;n&lt;/em&gt; + &lt;em&gt;n&lt;/em&gt;) )&lt;/p&gt;
+
+&lt;p&gt;= Θ( 2&lt;em&gt;n&lt;/em&gt;)&lt;/p&gt;
+
+&lt;p&gt;= Θ( &lt;em&gt;n&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;Our goal has been achieved!&lt;/p&gt;
+
+&lt;h3 id=&quot;red-black-trees&quot;&gt;Red Black Trees&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Everyone’s favorite! …Anyway, we are going to take an in-depth look into
+the CLRS code for deletion.  We will first take a look at a deletion that
+results in a fairly ‘quick fix,’ then move on to a bit more complex scenario.&lt;br /&gt;
+For each &lt;em&gt;RB_Delete&lt;/em&gt; call we will state the property that is violated, as 
+well as the case, in both the CLRS + Goodrich &amp;amp; Tamassia texts, that 
+occurs at each state of the fix-up process.&lt;/p&gt;
+
+&lt;p&gt;We will be working with the following tree for each individual call to &lt;em&gt;RB_Delete&lt;/em&gt;, i.e.,
+the second call doesn’t work off the result of the first…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3-a-md.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will work through deleting the root node where key-value = 2…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3-b-md.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will now delete the node with key-value = 1…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/3-c-md.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;height-of-a-red-black-tree&quot;&gt;Height of a Red Black Tree&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s determine the largest number of internal nodes possible on a red black tree of black height 
+&lt;em&gt;k&lt;/em&gt;, as well as the smallest.  Also, what the corresponding 2-4 tree heights would be.&lt;/p&gt;
+
+&lt;p&gt;A path from the root to leaf can have at most one red node between every black node, so twice the
+number of black nodes plus the bottommost red node…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;h&lt;/em&gt; = 2&lt;em&gt;k&lt;/em&gt; + 1&lt;/p&gt;
+
+&lt;p&gt;A complete tree would maximize the internal nodes as…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;n&lt;/em&gt; = 2&lt;sup&gt;h&lt;/sup&gt; - 1&lt;/p&gt;
+
+&lt;p&gt;= 2&lt;sup&gt;2&lt;em&gt;k&lt;/em&gt; + 1&lt;/sup&gt; - 1&lt;/p&gt;
+
+&lt;p&gt;For a complete red black tree, the 2-4 hieght is simply the black height as every node is
+absorbed by the black parent..&lt;/p&gt;
+
+&lt;p&gt;2-4 height = &lt;em&gt;k&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The least number of internal nodes occurs when the tree is black as a raven’s feather…&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;k&lt;/em&gt; + 1 = &lt;em&gt;lg&lt;/em&gt; ( &lt;em&gt;n&lt;/em&gt; + 1 )&lt;/p&gt;
+
+&lt;p&gt;2&lt;sup&gt;&lt;em&gt;k&lt;/em&gt; + 1&lt;/sup&gt; = &lt;em&gt;n&lt;/em&gt; + 1&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;n&lt;/em&gt; = 2&lt;sup&gt;&lt;em&gt;k&lt;/em&gt; + 1&lt;/sup&gt; - 1&lt;/p&gt;
+
+&lt;p&gt;Again the 2-4 height = &lt;em&gt;k&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Will the tree ever be black as a raven’s feather with the CLRS implementation?  Let us see…&lt;/p&gt;
+
+&lt;h5 id=&quot;claim-5&quot;&gt;Claim:&lt;/h5&gt;
+&lt;p&gt;if &lt;em&gt;n&lt;/em&gt; &amp;gt; 1, the tree has at least one red node.&lt;/p&gt;
+
+&lt;h5 id=&quot;proof-6&quot;&gt;Proof:&lt;/h5&gt;
+&lt;p&gt;If a node &lt;em&gt;z&lt;/em&gt; is inserted and ends up at the bottom of the tree it is colored red in line 16, 
+&lt;em&gt;Insert_Fix-up&lt;/em&gt; is called regardless.  In all cases, 1, 2 &amp;amp; 3, if the black depth or
+root properties are violated, node colors must be changed.  &lt;em&gt;z&lt;/em&gt; remains red, but the ancestors 
+of &lt;em&gt;z&lt;/em&gt; undergo color manipulation.  Ensuring that if &lt;em&gt;n&lt;/em&gt; &amp;gt; 1, then one node must certainly be
+red after insert, that particular node being &lt;em&gt;z&lt;/em&gt; itself.&lt;/p&gt;
+
+&lt;p&gt;QED&lt;/p&gt;
+
+&lt;h2 id=&quot;problem-set-07&quot;&gt;Problem set 07&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;dynamic-programming&quot;&gt;Dynamic Programming&lt;/h3&gt;
+&lt;p&gt;We now enter the wonderful world of graphs! In this set we will be focusing on the 
+exciting concepts of dynamic programming!&lt;/p&gt;
+
+&lt;h4 id=&quot;longest-paths&quot;&gt;Longest Paths&lt;/h4&gt;
+
+&lt;p&gt;To start off we will write code in javascript for the longest path through a graph that stores both
+the value and the path.  We will then write a function to print the path…&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/* Assume all values in next are initialized to 1 by the caller */&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Longest_Path_Memoized&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;infinity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;adj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;w&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Longest_Path_Memoized&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;G&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;alt&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;v&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Print_Longest_Path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;u&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!==&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'-&amp;gt; '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;analysis&quot;&gt;Analysis&lt;/h5&gt;
+&lt;p&gt;All entries of &lt;em&gt;next&lt;/em&gt; and &lt;em&gt;dist&lt;/em&gt; must be initialized, so this affects the run time of 
+Longest_Path_Memoized by O( &lt;em&gt;V&lt;/em&gt; ).  Each sub-problem represented by a node is solved once
+due to memoization.  Therefore the dominating cost of the algorithm exists in the forEach loop
+comparing adjacent edges of each node along the longest path, or O( &lt;em&gt;E&lt;/em&gt; ).  The printing routine 
+has to, in the worst case, iterate over an array that contains all of the nodes in the graph
+&lt;em&gt;G&lt;/em&gt;.  Thus the combined run-time of both algorithms is…&lt;/p&gt;
+
+&lt;p&gt;O( &lt;em&gt;E&lt;/em&gt; + &lt;em&gt;V&lt;/em&gt; + &lt;em&gt;V&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;= O( &lt;em&gt;E&lt;/em&gt; + 2&lt;em&gt;V&lt;/em&gt; )&lt;/p&gt;
+
+&lt;p&gt;= O( &lt;em&gt;E&lt;/em&gt; + &lt;em&gt;V&lt;/em&gt; )&lt;/p&gt;
+
+&lt;h4 id=&quot;activity-scheduling&quot;&gt;Activity Scheduling&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;When scheduling activities, the greedy approach of taking the earliest compatible finish time
+works absolutely fine when maximizing the number of elements in a sequence of activities.
+The locally optimized choice corresponds to global optimization as well.  In this problem,
+we look at activity revenue optimization which causes the greedy approach to break down.
+First, we’ll describe the optimal substructure of the problem, a mathematical recurrence relation,
+and finally implement the solution using dynamic programming.&lt;/p&gt;
+
+&lt;h5 id=&quot;optimal-substructure&quot;&gt;Optimal Substructure&lt;/h5&gt;
+&lt;p&gt;The optimal solution A&lt;sub&gt;ij&lt;/sub&gt; must also include the optimal solitions to two problems for
+S&lt;sub&gt;ik&lt;/sub&gt; and S&lt;sub&gt;kj&lt;/sub&gt;.  If there existed some other set A’&lt;sub&gt;ik&lt;/sub&gt; of mutually
+compatible activities in S&lt;sub&gt;ik&lt;/sub&gt; where the value of A’&lt;sub&gt;ik&lt;/sub&gt; was greater than that
+of A&lt;sub&gt;ik&lt;/sub&gt;, then we would use A’&lt;sub&gt;ik&lt;/sub&gt; instead of A&lt;sub&gt;ik&lt;/sub&gt; as an optimal
+solution to a sub-problem of S&lt;sub&gt;ij&lt;/sub&gt;.  This contradicts the assumption that A&lt;sub&gt;ij&lt;/sub&gt;
+is an optimal solution.  Similarly for S&lt;sub&gt;kj&lt;/sub&gt;.&lt;/p&gt;
+
+&lt;h5 id=&quot;recurrence&quot;&gt;Recurrence&lt;/h5&gt;
+&lt;p&gt;A recurrence relation can be defined by the following…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/dp-recur.png&quot; /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Below is pythonic pseudocode implementing our dynamic approach…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;def Activity_Revenue_Optimizer (n, s, f, v):
+  val = [0 ... n + 1, 0 ... n + 1]
+  activity = [0 ...  n + 1, 0 ... n + 1]
+  
+  for i in range(0, n):
+    val[i, i] = 0
+    val[i, i + 1] = 0
+  val[n + 1, n + 1] = 0
+  
+  for i in range(2, n + 1):
+    for j in range(0, n - i + 1):
+      k = j + i
+      val[j, k] = 0
+      l = k - 1
+      while (f[j] &amp;lt; f[l]):
+        if (f[j] &amp;lt;= s[l] and f[l] &amp;lt;= s[k] and 
+            val[j, l] + val[l, k] + v[l] &amp;gt; val[j, k]):
+              val[j, k] = val[j, l] + val[l, k] + v[l]
+              activity[j, k] = l
+        l -= 1
+  return (val, activity)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It would be useful to see a print out of the activities…&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-asp&quot;&gt;def Print_Activities (val, activity, i, j):
+  if (val[i, j] &amp;gt; 0):
+    k = activity[i, j]
+    print(k)
+    Print_Activities (val, activity, i, k)
+    Print_Activities (val, activity, k + 1, j)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;analysis-1&quot;&gt;Analysis&lt;/h5&gt;
+&lt;p&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Back to Top&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Activity_Revenue_Optimizer requires O( &lt;em&gt;n&lt;/em&gt; &lt;sup&gt;3&lt;/sup&gt; ) time to compare some element to
+every other element in a two-dimensional array.&lt;/p&gt;
+
+&lt;p&gt;Print_Activities is, in the worst case, O( &lt;em&gt;n&lt;/em&gt; ) if all activities are compatible and thus
+require printing.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="project" /><category term="algorithms" /><category term="dynamic / greedy" /><category term="analysis" /><summary type="html">CLRS Problem Set Solutions</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/clrs.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00-10:00</published><updated>2016-02-24T22:48:00-10:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;You can pick as item to see how to apply in markdown.&lt;/p&gt;
 
