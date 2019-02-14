@@ -13,7 +13,7 @@ confidence in my career choice, confidence accompanied by the fact that the
 disciplines of computer science both captivate my imagination and challenge my 
 thinking.  As a result: Excitement!</p>
 <p>When I am not speding my time coding / hacking / thinking about coding | hacking, 
-I am eithher surfing or spending time with my family.  Maybe even surfing with my
+I am either surfing or spending time with my family.  Maybe even surfing with my
 family (win-win).  I live on the beautiful island of Oahu, but despite its beauty
 my final destination is the mainland of the US.  The reasoning behind this is 
 both school (master's program) and opportunities (good surf, no jobs).  As a human 
