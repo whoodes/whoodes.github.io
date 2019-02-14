@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-13T22:39:26-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">:hammer: Algorithms Anonymous</title><link href="http://localhost:4000/project-algorithms-anonymous/" rel="alternate" type="text/html" title=":hammer: Algorithms Anonymous" /><published>2019-01-03T22:10:00-10:00</published><updated>2019-01-03T22:10:00-10:00</updated><id>http://localhost:4000/project-algorithms-anonymous</id><content type="html" xml:base="http://localhost:4000/project-algorithms-anonymous/">&lt;h1 id=&quot;clrs-problem-set-solutions&quot;&gt;CLRS Problem Set Solutions&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-13T22:48:48-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">:hammer: Algorithms Anonymous</title><link href="http://localhost:4000/project-algorithms-anonymous/" rel="alternate" type="text/html" title=":hammer: Algorithms Anonymous" /><published>2019-01-03T22:10:00-10:00</published><updated>2019-01-03T22:10:00-10:00</updated><id>http://localhost:4000/project-algorithms-anonymous</id><content type="html" xml:base="http://localhost:4000/project-algorithms-anonymous/">&lt;h1 id=&quot;clrs-problem-set-solutions&quot;&gt;CLRS Problem Set Solutions&lt;/h1&gt;
 
 &lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
 &lt;ul&gt;
@@ -1335,7 +1335,53 @@ is an optimal solution.  Similarly for S&lt;sub&gt;kj&lt;/sub&gt;.&lt;/p&gt;
 every other element in a two-dimensional array.&lt;/p&gt;
 
 &lt;p&gt;Print_Activities is, in the worst case, O( &lt;em&gt;n&lt;/em&gt; ) if all activities are compatible and thus
-require printing.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="project" /><category term="algorithms" /><category term="dynamic / greedy" /><category term="analysis" /><summary type="html">CLRS Problem Set Solutions</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/clrs.jpg" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00-10:00</published><updated>2016-02-24T22:48:00-10:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+require printing.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="project" /><category term="algorithms" /><category term="dynamic / greedy" /><category term="analysis" /><summary type="html">CLRS Problem Set Solutions</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/clrs.jpg" /></entry><entry><title type="html">:stock_market: UH Bazaar</title><link href="http://localhost:4000/project-uh-bazaar/" rel="alternate" type="text/html" title=":stock_market: UH Bazaar" /><published>2018-12-06T22:10:00-10:00</published><updated>2018-12-06T22:10:00-10:00</updated><id>http://localhost:4000/project-uh-bazaar</id><content type="html" xml:base="http://localhost:4000/project-uh-bazaar/">&lt;p&gt;During the creation of the UH Bazaar application, my role existed as lead developer.  This was a welcomed burden, as the 
+dynamics within our team naturally resulted in this outcome.  I helped delegate tasks to meet deadlines, assisted team 
+members with debugging to the best of my ability, performed code review prior to deployment, along with the task of 
+deploying the current version of the application corresponding to all three milestones.  I also assisted team members 
+with git related issues.&lt;/p&gt;
+
+&lt;p&gt;Within the application itself, I was responsible for user related functionality:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create user&lt;/li&gt;
+  &lt;li&gt;distinguish profile ownership&lt;/li&gt;
+  &lt;li&gt;edit profile option&lt;/li&gt;
+  &lt;li&gt;show users with view options&lt;/li&gt;
+  &lt;li&gt;rate user&lt;/li&gt;
+  &lt;li&gt;integrating the &lt;em&gt;Items&lt;/em&gt; and &lt;em&gt;Users&lt;/em&gt; collections for use on the client side.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I was also responsible for item functionality:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;create item&lt;/li&gt;
+  &lt;li&gt;remove item&lt;/li&gt;
+  &lt;li&gt;search item&lt;/li&gt;
+  &lt;li&gt;make item offer&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For data hosting, with both user profile and item images, I integrated the UH Bazaar application with Amazon Web Services
+using an S3 bucket.  This allows users to upload their images instead of being restricted to only using urls.  Succeeding 
+in this task was a very educational and rewarding experience.&lt;/p&gt;
+
+&lt;h3 id=&quot;personal-side-goals&quot;&gt;Personal side goals&lt;/h3&gt;
+
+&lt;p&gt;I generated a Google API key for UH Bazaar to integrate with Google Maps as an added functionality.
+A branch exists with a map mock-up without functionality. I plan to implement this feature in the near future.  I view this
+goal as an excellent learning opportunity regarding Google integration.  Like any piece of software, UH Bazaar will never
+truly be complete.  As such, I plan to hone my javascript skills further by making incremental improvements to the application
+in my spare time.&lt;/p&gt;
+
+&lt;h3 id=&quot;as-a-result&quot;&gt;As a result&lt;/h3&gt;
+
+&lt;p&gt;Throughout this project, I have grown as a software developer.  I have accomplished goals I would have thought impossible 
+just a year ago.  The accomplishments I achieved during the few weeks spent on UH Bazaar bolstered my exuberance in terms
+of what I have to look forward to by becoming a computer scientist.  As a result, I excitedly await my next challenge.&lt;/p&gt;
+
+&lt;h3 id=&quot;check-out-our-home-page-for-more-information-&quot;&gt;Check out our home page for more &lt;a href=&quot;https://uhbazaar.github.io/&quot;&gt;information &lt;i class=&quot;large github icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;
+
+&lt;h3 id=&quot;or-go-straight-to-the-source-&quot;&gt;Or, go straight to the &lt;a href=&quot;https://github.com/uhbazaar&quot;&gt;source &lt;i class=&quot;large code branch icon&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/h3&gt;</content><author><name>whoodes</name></author><category term="project" /><category term="Semantic UI ReactJS" /><category term="Meteor" /><category term="Team Development" /><summary type="html">During the creation of the UH Bazaar application, my role existed as lead developer. This was a welcomed burden, as the dynamics within our team naturally resulted in this outcome. I helped delegate tasks to meet deadlines, assisted team members with debugging to the best of my ability, performed code review prior to deployment, along with the task of deploying the current version of the application corresponding to all three milestones. I also assisted team members with git related issues.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/bazaar-header.png" /></entry><entry><title type="html">Markdown Extra Components</title><link href="http://localhost:4000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" /><published>2016-02-24T22:48:00-10:00</published><updated>2016-02-24T22:48:00-10:00</updated><id>http://localhost:4000/markdown-extra-components</id><content type="html" xml:base="http://localhost:4000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;You can pick as item to see how to apply in markdown.&lt;/p&gt;
 
@@ -1665,25 +1711,4 @@ It’s sometimes handy for breaking things up.&lt;/p&gt;
         &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#hamburguer__open'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fadeIn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html">Basic formatting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">:ramen: Indigo, minimalist jekyll theme</title><link href="http://localhost:4000/indigo-jekyll-theme/" rel="alternate" type="text/html" title=":ramen: Indigo, minimalist jekyll theme" /><published>2016-01-23T22:10:00-10:00</published><updated>2016-01-23T22:10:00-10:00</updated><id>http://localhost:4000/indigo-jekyll-theme</id><content type="html" xml:base="http://localhost:4000/indigo-jekyll-theme/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Example of project - Indigo Minimalist Jekyll Template - &lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Demo&lt;/a&gt;. This is a simple and minimalist template for Jekyll for those who likes to eat noodles.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;What has inside?&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Gulp&lt;/li&gt;
-  &lt;li&gt;BrowserSync&lt;/li&gt;
-  &lt;li&gt;Stylus&lt;/li&gt;
-  &lt;li&gt;SVG&lt;/li&gt;
-  &lt;li&gt;Travis&lt;/li&gt;
-  &lt;li&gt;No JS&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F&quot;&gt;98/100&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Check it out&lt;/a&gt; here.
-If you need some help, just &lt;a href=&quot;http://github.com/sergiokopplin/indigo/issues&quot;&gt;tell me&lt;/a&gt;.&lt;/p&gt;</content><author><name>johndoe</name></author><category term="project" /><category term="jekyll" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://koppl.in/indigo/assets/images/jekyll-logo-light-solid.png" /></entry></feed>
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>johndoe</name></author><category term="blog" /><category term="markdown" /><category term="elements" /><summary type="html">Basic formatting</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
