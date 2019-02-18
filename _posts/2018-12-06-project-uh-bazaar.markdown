@@ -1,16 +1,17 @@
 ---
-title: ":department_store: UH Bazaar"
+title: ":convenience_store: UH Bazaar"
 layout: post
 date: 2018-12-06 22:10
 tag: 
-- Semantic UI ReactJS
+- Semantic UI React
 - Meteor
 - Team Development
+- JetBrains
 image: /assets/images/bazaar-header.png
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+description: "A team project, built with React!"
 category: project
 author: whoodes
 externalLink: false

@@ -6,12 +6,13 @@ tag:
 - algorithms
 - dynamic / greedy
 - analysis
+- graphs
 image: /assets/images/clrs.jpg
 projecturl: https://whoodes.github.io/CLRS-Problem-Set-Solutions/
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+description: "Problem set solutions."
 category: project
 author: whoodes
 externalLink: false
