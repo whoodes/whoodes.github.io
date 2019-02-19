@@ -1,5 +1,5 @@
 ---
-title: ":male-student: Paths to Intelligence"
+title: ":man_student: Paths to Intelligence"
 layout: post
 date: 2018-08-28 22:48
 image: /assets/images/markdown.jpg
