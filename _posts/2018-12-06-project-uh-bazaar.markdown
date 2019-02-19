@@ -56,6 +56,6 @@ Throughout this project, I have grown as a software developer.  I have accomplis
 just a year ago.  The accomplishments I achieved during the few weeks spent on UH Bazaar bolstered my exuberance in terms
 of what I have to look forward to by becoming a computer scientist.  As a result, I excitedly await my next challenge.
 
-### Check out our home page for more [information <i class="large github icon"></i>](https://uhbazaar.github.io/)
+#### Check out our home page for more [information <i class="large github icon"></i>](https://uhbazaar.github.io/)
 
-### Or, go straight to the [source <i class="large code branch icon"></i>](https://github.com/uhbazaar)
+#### Or, go straight to the [source <i class="large code branch icon"></i>](https://github.com/uhbazaar)
