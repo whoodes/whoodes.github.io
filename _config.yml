@@ -1,6 +1,6 @@
 # main text of home
 name: Wyatt Hoodes
-bio: Advocate of open source | Solver of puzzles [SITE IS WIP]
+bio: Advocate of open source | Solver of puzzles
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -56,7 +56,7 @@ email: hoodesw@hawaii.edu
 authors:
     whoodes:
         name: Wyatt Hoodes
-        bio: Coding + Surfing = Living
+        bio: Advocate of open source | Solver of puzzles
         external-image: false
         picture: assets/images/profile-pic.jpg
         twitter: wyatt_hoodes
