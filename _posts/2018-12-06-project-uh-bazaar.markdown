@@ -5,7 +5,7 @@ date: 2018-12-06 22:10
 tag: 
 - Semantic UI React
 - Meteor
-- Team Development
+- Team development
 - JetBrains
 image: /assets/images/bazaar-header.png
 headerImage: true

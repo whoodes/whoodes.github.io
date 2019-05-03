@@ -7,8 +7,8 @@ tag:
 - IoT
 - Communication
 - Team development
-- Javascript
-- Python
+- javascript
+- python
 image: /assets/images/insightbulb.png
 headerImage: true
 projects: true
