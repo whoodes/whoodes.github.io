@@ -13,7 +13,7 @@ image: /assets/images/insightbulb.png
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "An IoT web application to control ambient light notifications"
+description: "An IoT web application to control ambient light notifications!"
 category: project
 author: whoodes
 externalLink: false
