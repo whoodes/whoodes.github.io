@@ -27,4 +27,12 @@ just finished my software engineering course where I got well acquainted with Gi
 then it struck me: I should just contribute to an open source project written in Python!  And so begins
 my story into the world of open source software.
 
-*To be continued!* 
+Now that I was ready to embark on my epic journey, I just needed to find a place to start.  Which was a
+bit overwhelming:  Which projects are good for beginners?  Am I going to be able to easily set up the
+development environment?  Do I even have the necessary skills?  I mean I'm trying to learn a language
+by contributing to a project? Am I crazy for even thinking this?  My mind was flooded with all of these
+questions, questions sprinkled with just a touch of self-doubt.  But I wasn't going to let that stop me.
+I've been in those types of places before, and I've always found that keeping my head down, pushing
+forward, and working hard generates a large area on the probability distribution of success.  So, I
+opened up Chrome, started up that shiny V8 javascript engine, typed, "good github projects for
+beginners", and hit enter (actually return cause I'm using a mac)...
