@@ -36,3 +36,5 @@ I've been in those types of places before, and I've always found that keeping my
 forward, and working hard generates a large area on the probability distribution of success.  So, I
 opened up Chrome, started up that shiny V8 javascript engine, typed, "good github projects for
 beginners", and hit enter (actually return cause I'm using a mac)...
+
+*To be continued...*
