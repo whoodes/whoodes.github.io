@@ -37,4 +37,15 @@ forward, and working hard generates a large area on the probability distribution
 opened up Chrome, started up that shiny V8 javascript engine, typed, "good github projects for
 beginners", and hit enter (actually return cause I'm using a mac)...
 
+I began perusing through lists of projects, primarily this great repo: https://github.com/MunGell/awesome-for-beginners.
+There were certainly plenty of choices, but seeing projects in languages I was more proficient in, as well as
+maybe picking up another language of interest """ TODO: show C++ some <3 """, made me feel a bit overwhelmed.
+So, I did what any normal person would do; I started clicking on links.  I clicked here, README, I clicked there,
+README, half the battle with most of the projects I looked at was properly setting up the development environment.
+And then I came across a very special page on the internet, [Zulip's](https://github.com/zulip/zulip) server
+repository, (along with awesome [terminal](https://github.com/zulip/zulip-terminal)(!), and
+[desktop](https://github.com/zulip/zulip-desktop) clients.  As well as a solid
+[mobile](https://github.com/zulip/zulip-mobile) experience running on React Native).  Now this is where the journey
+truly begins.
+
 *To be continued...*
