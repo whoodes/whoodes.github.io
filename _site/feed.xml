@@ -1,4 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-13T08:27:19-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">:heart: My First Contribution</title><link href="http://localhost:4000/blog-open-source/" rel="alternate" type="text/html" title=":heart: My First Contribution" /><published>2019-05-18T22:10:00-10:00</published><updated>2019-05-18T22:10:00-10:00</updated><id>http://localhost:4000/blog-open-source</id><content type="html" xml:base="http://localhost:4000/blog-open-source/">&lt;p&gt;It all started because I wanted to learn Python.  The University I attend is a bit lacking in pythonistas,
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-14T09:43:19-10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Wyatt Hoodes</title><subtitle>A blog about technology and stuff related</subtitle><entry><title type="html">:sunrise: GSoC 2019 with Zulip</title><link href="http://localhost:4000/project-gsoc-zulip/" rel="alternate" type="text/html" title=":sunrise: GSoC 2019 with Zulip" /><published>2019-08-12T22:10:00-10:00</published><updated>2019-08-12T22:10:00-10:00</updated><id>http://localhost:4000/project-gsoc-zulip</id><content type="html" xml:base="http://localhost:4000/project-gsoc-zulip/">&lt;p&gt;&lt;em&gt;This post contains a summary of my accomplishments during my time as a Google Summer of Code 2019 participant with the Zulip Open Source Project.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I would like to thank my official and un-official mentors who helped me to become a better software developer.
+With their help, I’ve had an incredibly fun, productive, and enriching summer!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tim Abbott, Aditya Bansal, and Anders Kaseorg:&lt;/strong&gt; Thank you for your patience and insight, and for imparting excellent advice and expertise when reviewing my code.&lt;/p&gt;
+
+&lt;p&gt;My work for the summer, based off my &lt;a href=&quot;https://summerofcode.withgoogle.com/projects/#5885104910499840&quot; target=&quot;_blank&quot;&gt;proposal&lt;/a&gt;, improved upon Zulip’s already awesome development productivity tooling.
+Alongside this project, I also completed a project that implemented a full web application feature from scratch.
+This feature brought a “public only” data export capability to the application with a simple click of a button.  An
+event that previously took a few back and forth emails, and effort from a Zulip administrator to manually conduct
+the export.&lt;/p&gt;
+
+&lt;h2 id=&quot;work-completed&quot;&gt;Work completed&lt;/h2&gt;
+
+&lt;h3 id=&quot;development-productivity-tooling&quot;&gt;Development productivity tooling&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;This project consisted of many sub-projects to improve the quality of life for developers.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12458&quot; target=&quot;_blank&quot;&gt;Hashing optimization&lt;/a&gt;: Here I added
+a few hundred millisecond optimization to our &lt;code class=&quot;highlighter-rouge&quot;&gt;test-backed&lt;/code&gt; start-up time.  This was accomplished by hashing and
+comparing our migration files.  Thus we would only do the costly work of parsing the files if our hashes differed.
+This project required studying sha hash protocols in order to implement the correct approach using our built-in
+hash functions.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12486&quot; target=&quot;_blank&quot;&gt;Fix test database memory leak&lt;/a&gt;:  After a
+fix to running multiple instances of &lt;code class=&quot;highlighter-rouge&quot;&gt;test-backend&lt;/code&gt; in parallel, we faced a memory leak issue regarding an
+accumulation of our template databases.  This project required a bit of exploring the code to figure out that
+uniquely naming our databases meant they were not being “recycled”, so we had to manually throw out the garbage.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12533&quot; target=&quot;_blank&quot;&gt;Design database leak management algorithm&lt;/a&gt;:
+After fixing the memory leak issue, we needed to design an algorithm to deal with potential leaks that still arose
+from certain race conditions, such as an ill-timed &lt;code class=&quot;highlighter-rouge&quot;&gt;SIGINT&lt;/code&gt;.  In this project I learned about correctly implementing
+the design of an algorithm, how to optimally shell-out postgres commands from python, and when set arithmetic can
+simplify complicated list comprehension logic.  With the help of my mentor, Aditya Bansal, we also discovered the
+cause of an interesting bug that double appended the database id when attempting to destroy the database when running
+in serial mode.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12425&quot; target=&quot;_blank&quot;&gt;Fix Ubuntu Bionic log file generation&lt;/a&gt;:
+After upgrading Bionic, Vagrant was generating a log file that was spamming the project’s root directory.  This
+took a bit of investigation in upstream’s issue tracker.  This was a small, quick project that was an excellent
+research exercise.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12272&quot;&gt;Fix spurious high-parallel test failure&lt;/a&gt;: After we made the change
+to base our &lt;code class=&quot;highlighter-rouge&quot;&gt;test-backend&lt;/code&gt; parallel process count off of &lt;code class=&quot;highlighter-rouge&quot;&gt;os.cpu_count&lt;/code&gt;, we had a sprint of fixing new and
+interesting errors that were arising from the high parallelism.  This fix was simply to reset our default
+language.  However, I gained a great appreciation for patience when tracing hard-to-reproduce errors
+of this from.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12602&quot; target=&quot;_blank&quot;&gt;Improve settings.py debuggability&lt;/a&gt;:
+The change I made here helps to improve the experience when setting up a Zulip production system, as syntax
+errors in the &lt;code class=&quot;highlighter-rouge&quot;&gt;settings.py&lt;/code&gt; file means django doesn’t start up.  This in turn means that no error output
+is written to the log file.  To fix that, we simply catch and log any errors when starting up django.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;clean-up-var-filesystem-access&quot;&gt;Clean up var/ filesystem access&lt;/h4&gt;
+&lt;p&gt;This project consisted of two-parts: A general initial clean up and re-structure, followed by the long-term
+implementation for the filesystem.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12540&quot; target=&quot;_blank&quot;&gt;Initial var/ clean up&lt;/a&gt;: Here I tackled
+the first stages of cleaning up the filesystem, which consisted of getting our tests to all write to a specified
+&lt;code class=&quot;highlighter-rouge&quot;&gt;UUID&lt;/code&gt; directory, along with having our provision and test suite processes remove all of the transferred files.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12698&quot; target=&quot;_blank&quot;&gt;Follow up to restructure work&lt;/a&gt;:
+This pull request consisted of the new implementation for how file generation in our backend tests is
+handled. I created a unique test run directory for each run of the suite, with an algorithm to handle
+removing directories that were created outside of an allotted time delta.  To handle parallelism, every
+worker that is spawned during a run of the test suite writes to its own directory within the unique parent.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A couple bug fixes as additional follow ups:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12786&quot; target=&quot;_blank&quot;&gt;Fix 1&lt;/a&gt;: Appropriate error handling.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12794&quot; target=&quot;_blank&quot;&gt;Fix 2&lt;/a&gt;: Apply correct values when setting
+up Django.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This project helped me to see the importance of planning, drafting, and editing when it comes to implementing
+ideas in code.  It’s one thing to have the right idea, but another thing entirely to have the best approach.&lt;/p&gt;
+
+&lt;h4 id=&quot;moving-forward&quot;&gt;Moving forward&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12682&quot; target=&quot;_blank&quot;&gt;Upload Casper images as CI artifacts&lt;/a&gt;:
+I simply added the images generated by a Casper test failure as a CircleCI artifact.This was a simple quality
+of life improvement for folks running tests remotely.  &lt;a href=&quot;https://github.com/zulip/zulip/pull/12700&quot; target=&quot;_blank&quot;&gt;Error output&lt;/a&gt; was also added.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12688&quot; target=&quot;_blank&quot;&gt;Improve Ubuntu Trusty error messaging&lt;/a&gt;:
+We dropped support of Ubuntu Trusty due to its imminent EOL, folks still using it for development had the potential
+to run into confusing errors.  This added output helps to mitigate confusion.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12727&quot; target=&quot;_blank&quot;&gt;Store Casper results as XML file&lt;/a&gt;:
+Casper tests have a tendency to be spurious regarding a consistent set of tests.  By adding this XUnit XML
+file, it helps to make it immediately apparent if the failure is a typical Casper flake.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12699&quot; target=&quot;_blank&quot;&gt;Improve provision error messaging&lt;/a&gt;: We see
+quite a few folks have provision fail on &lt;code class=&quot;highlighter-rouge&quot;&gt;yarn install&lt;/code&gt;, this is almost always due to network connectivity/proxy issues.
+The updates I made here helps clarify this by de-cluttering the provision failure, as well as color-highlighting advice
+to check the network.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12806&quot; target=&quot;_blank&quot;&gt;Add fix options to template lint&lt;/a&gt;: This was 
+a fun little project that added the &lt;code class=&quot;highlighter-rouge&quot;&gt;--fix&lt;/code&gt; option to our handlebar template linter.  A relatively simple fix, that
+has a big impact on improving developer quality of life.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12787&quot; target=&quot;_blank&quot;&gt;Migrate open statements to use context managers&lt;/a&gt;:
+This rather mechanical migration actually had a very organic lesson to teach me: It is important to slow down and ensure
+that every change being made is understood, and verifiable as correct.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12836&quot; target=&quot;_blank&quot;&gt;Update syntax and comment in codecov.yml&lt;/a&gt;:
+A very small self-explanatory update.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12833&quot; target=&quot;_blank&quot;&gt;Remove remnants of new-user-bot&lt;/a&gt;:  There
+were a handful of occurrences where we still referenced the now non-existent new user bot.  I removed all such
+occurrences in this pull request, which also aided work being done for a fellow GSoCer.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;mypy-upgrades&quot;&gt;Mypy upgrades&lt;/h4&gt;
+
+&lt;p&gt;Later in the summer I began work on upgrading mypy, as well as adding the new &lt;code class=&quot;highlighter-rouge&quot;&gt;--warn-unreachable&lt;/code&gt; option,
+which warns of redundant or unreachable lines of code.  Adding this option resulted in a large blob of files that needed
+to be looked at as preparatory work in order to add the option by default.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12850&quot; target=&quot;_blank&quot;&gt;Upgrade to mypy 0.711&lt;/a&gt;:
+This upgrade came with big performance improvement, which led to mypy now being one of our fastest linters to check
+the entire codebase.  This project was a great introduction to working with type annotations and hints in Python,
+and paved the way for the larger &lt;code class=&quot;highlighter-rouge&quot;&gt;--warn-unreachable&lt;/code&gt; work as part of the mypy 0.720 upgrade.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12893&quot; target=&quot;_blank&quot;&gt;Upgrade to mypy 0.720&lt;/a&gt;:
+This pull request was separated out from the &lt;code class=&quot;highlighter-rouge&quot;&gt;warn-unreachable&lt;/code&gt; blob, so as to be merged while work continued on
+addressing the discrepancies from the &lt;code class=&quot;highlighter-rouge&quot;&gt;--warn-unreachable&lt;/code&gt; option.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12894&quot; target=&quot;_blank&quot;&gt;Fix warn-unreachable errors&lt;/a&gt;:&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;This project was an awesome exercise in typing with Python.  The &lt;code class=&quot;highlighter-rouge&quot;&gt;warn-unreachable&lt;/code&gt; option flagged many interesting
+errors in our codebase, as well as some more mundane errors that resulted from approaches being somewhat out of date
+(e.g., using &lt;code class=&quot;highlighter-rouge&quot;&gt;if False&lt;/code&gt; when importing instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;if TYPE_CHECKING&lt;/code&gt;, which evaluates to &lt;code class=&quot;highlighter-rouge&quot;&gt;False&lt;/code&gt; at runtime
+and &lt;code class=&quot;highlighter-rouge&quot;&gt;True&lt;/code&gt; when type checking.)&lt;/li&gt;
+      &lt;li&gt;Adding this option helped to clean up a lot of dead code that had been left
+over as a result of prior refactorings.   Working on this project helped improve my code reading skills,
+as well as building up a foundation of consistently referencing documentation when looking for standard
+approaches to issues.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;export-feature-for-the-webapp&quot;&gt;Export feature for the webapp&lt;/h3&gt;
+
+&lt;p&gt;This project has been on-going since April 2019.  It was an awesome feeling to see this pull request closed,
+ and the “public export” functionality of this feature complete.  The journey here was an incredible learning
+ experience in code-reviews, full stack development, and software engineering in general!&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/11996&quot; target=&quot;_blank&quot;&gt;Export feature&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;After working on this project, I can’t imagine a more efficient way to get well acquainted with the Django framework.
+Tim Abbott is an incredible software engineer, and a kind and patient teacher.  This project wouldn’t have been possible
+for me without his help.  With his guidance and feedback, I have come a long way from the software developer I was when
+this project began.&lt;/p&gt;
+
+&lt;h2 id=&quot;work-on-the-todo-list&quot;&gt;Work on the TODO list&lt;/h2&gt;
+
+&lt;p&gt;I still have a few pull requests in progress that are both pending review, and in need of a new perspective
+to achieve an optimal approach.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12271&quot; taget=&quot;_blank&quot;&gt;Add a replicate option to test-backend&lt;/a&gt;:
+This was a very fun and interesting project that replicates all of the tests that were ran in a failed process
+during a run of the &lt;code class=&quot;highlighter-rouge&quot;&gt;test-backend&lt;/code&gt; test suite.  The relevance of this option is that it give free reproducibility
+when faced with a spurious failure to running the set of tests with high parallelism.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/zulip/zulip/pull/12575&quot; target=&quot;_blank&quot;&gt;Parallelize test-js-with-node&lt;/a&gt;:
+This is a somewhat tricky issue.  Attempts to simply borrow the approach from how we run our linters in
+parallel (divide-and-conquer the set of tests to run–forking them off into separate processes) doesn’t produce
+an adequate boost in performance.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;My work during the summer can be found at my GitHub &lt;a href=&quot;https://github.com/whoodes/zulip/projects/2&quot; target=&quot;_blank&quot;&gt;project&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;All of my merged commits can be found &lt;a href=&quot;https://github.com/zulip/zulip/commits?author=whoodes&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</content><author><name>whoodes</name></author><category term="project" /><category term="Software Engineering" /><category term="Google" /><category term="python" /><category term="Django" /><category term="javascript" /><category term="Team development" /><category term="Remote work" /><category term="git" /><summary type="html">This post contains a summary of my accomplishments during my time as a Google Summer of Code 2019 participant with the Zulip Open Source Project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://cdn-images-1.medium.com/max/800/1*g5RBYeGe0VLB6t_ZsvO_wQ.png" /></entry><entry><title type="html">:heart: My First Contribution</title><link href="http://localhost:4000/blog-open-source/" rel="alternate" type="text/html" title=":heart: My First Contribution" /><published>2019-05-18T22:10:00-10:00</published><updated>2019-05-18T22:10:00-10:00</updated><id>http://localhost:4000/blog-open-source</id><content type="html" xml:base="http://localhost:4000/blog-open-source/">&lt;p&gt;It all started because I wanted to learn Python.  The University I attend is a bit lacking in pythonistas,
 so I had to take matters into my own hands.  However, I wasn’t sure which route to take.  I tried going
 through python problem sets on HackerRank, but these felt a little dry and I didn’t feel the concepts
 sinking in.  I thought about trying pycharm’s educational version, but I soon found out this was for
@@ -19,7 +225,7 @@ beginners”, and hit enter (actually return cause I’m using a mac)…&lt;/p&g
 
 &lt;p&gt;I began perusing through lists of projects, primarily this great repo: https://github.com/MunGell/awesome-for-beginners.
 There were certainly plenty of choices, but seeing projects in languages I was more proficient in, as well as
-maybe picking up another language of interest “”” TODO: show C++ some &amp;lt;3 “””, made me feel a bit overwhelmed.
+maybe picking up another language of interest (TODO: show C++ some &amp;lt;3), made me feel a bit overwhelmed.
 So, I did what any normal person would do; I started clicking on links.  I clicked here, README, I clicked there,
 README, half the battle with most of the projects I looked at was properly setting up the development environment.
 And then I came across a very special page on the internet, &lt;a href=&quot;https://github.com/zulip/zulip&quot;&gt;Zulip’s&lt;/a&gt; server
@@ -1501,28 +1707,4 @@ This is exactly how a framework such as Semantic UI makes intricate, aesthetical
 &lt;p&gt;I am beginning to realize that a crucial trait in becoming a software engineer is being able to seamlessly adapt to multiple standards regarding separate projects.  E.g., on the one hand, at the time of writing this essay, I have one course where we code in a unix environment via the terminal.  Writing code is done primarily through vim while adhering to the strict standards defined by the professor.  On the other hand, another course where I am writing javascript to be utilized in web-based applications, accomplished through the intricate IntelliJ IDEA in conjunction  with git and GitHub.  Thus I have two unique programming paradigms to juggle.  Being a proficient software engineer, from my point of view, means having an open mind, as well as an agile and dynamic approach to acclimating to diverse project standards.&lt;/p&gt;
 
 &lt;h3 id=&quot;010011100010000-hours&quot;&gt;010011100010000 hours&lt;/h3&gt;
-&lt;p&gt;Every hour I spend honing skills, every hour I spend learning new technologies and concepts, every hour thinking of the most efficient way to solve a problem, every hour learning an IDE, every hour &lt;em&gt;accumulates&lt;/em&gt;.  With this in mind, I am excited about what the future holds.  I am also (surprisingly) excited about working within a coding standard, because it means I am participating in something that is bigger than myself.  The use of these standards while attending university gives me a glimpse into a very exciting future where I will be working with other passionate individuals to build the latest and greatest software and technologies.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="blog" /><category term="Coding standards" /><category term="ESLint" /><category term="JetBrains" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry><entry><title type="html">:walking: The High Road</title><link href="http://localhost:4000/blog-high-road/" rel="alternate" type="text/html" title=":walking: The High Road" /><published>2018-09-04T22:48:00-10:00</published><updated>2018-09-04T22:48:00-10:00</updated><id>http://localhost:4000/blog-high-road</id><content type="html" xml:base="http://localhost:4000/blog-high-road/">&lt;p&gt;&lt;img src=&quot;/assets/images/high-road.jpg&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;There exists in the universe, the optimal string representing each particular gap in understanding.  Arranged in such a way, these words emanate the mysteries of existence like solar flares departing from the sun.  These bands of inquisition streak across the atmosphere of thought leaving an aurora borealis of inspiration on the mind.  Captivated, an answer emerges.  “What planet is this guy living on?” Such a question might be at the thought-train crossing right now.  I understand, we live in a day and age where everyone is looking for a handout, while attention spans are in increasingly short supply.  I implore you, do not conform!  The human mind is the most complex clump of carbon in the known universe, we must utilize it to the fullest potential.  Anyway, in the following paragraphs I will give an example to help you, the reader, lose what faith in humanity you might possess.  Then, just when the hero seems devoid of purpose, a brilliantly formulated question will make everything right as rain.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-bad&quot;&gt;The bad&lt;/h2&gt;
-&lt;p&gt;The following question hits close to home because I, in the throws of my naivety, have postulated the same query.  Although, I have never had the courage to paint a giant target on myself by disseminating my ignorance to a public forum like Stack Overflow.  So, ladies and gentleman, &lt;a href=&quot;https://stackoverflow.com/questions/245062/whats-the-difference-between-javascript-and-java&quot;&gt;here it is…&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&quot;what-is-the-difference-between-javascript-and-java&quot;&gt;“What is the difference between JavaScript and Java?”&lt;/h4&gt;
-&lt;p&gt;&lt;img style=&quot;float: left; margin: 5px 15px 15px 0px;&quot; src=&quot;/assets/images/say-what.jpg&quot; width=&quot;100&quot; /&gt;
-Let us dissect this question into its mortally sinning constituents.  First off, that was the question in its entirety…  Does the asker of this question appear as if they had put forth any prior effort to overcome this insolvable conundrum on their own? Did the thought that, perhaps, somewhere out there was a description of Java &lt;em&gt;and&lt;/em&gt; a description of JavaScript?  Did they think to google it?  How about check a wikipedia?  The answer to all of these questions is, in fact, painfully obvious.  The best solution for this poor soul was apparently heading on over to a technical forum and asking, “what is the difference…?”  To quote the top voted answer, with 575 votes, “Java and Javascript are similar like Car and Carpet are similar.”  Did that answer the question for our dear friend?  Yes, why yes it did.  Was it the answer they were looking for?  Probably not, but maybe a valuable lesson was learned.  A thoughtless question with no structure, no details, and no specificities of any kind, only results in a virtual dunce cap being placed squarely upon the inquisitors head.&lt;/p&gt;
-
-&lt;p&gt;&lt;br style=&quot;clear:both&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;i-like-all-of-us&quot;&gt;I, like all of us&lt;/h4&gt;
-&lt;p&gt;have been in the exact same position as our friend here.  For me, my face turns red, I start sweating and my hands turn clammy as my autonomic nervous system goes into overdrive.  A result from making a fool of myself.  Granted, there were a few kind-hearted responses.  One graciously giving a brief overview of the key differences, another linking to a wikipedia article.  While this exemplifies the good-natured community being cultivated, it does not take away from the age old saying, &lt;em&gt;“better to be thought a fool, than to open your mouth and remove all doubt.”&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;the-good&quot;&gt;The good&lt;/h2&gt;
-&lt;p&gt;Having visited a dark, desolate corner of the internet, let us venture into a much more illuminated and inspirational place.  A place where insight and opportunities for growth abound.  Without further ado, in the spirit of originality, here is the current top voted question on Stack Overflow…&lt;/p&gt;
-&lt;h4 id=&quot;why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array&quot;&gt;“Why is it faster to process a sorted array than an unsorted array?”&lt;/h4&gt;
-&lt;p&gt;The title is clear and concise, easily identifiable and just vague enough to draw someone into reading the fine details.  Speaking of the details, this user gift wrapped the question with what was specifically meant by the title, examples of code that were run, and benchmarks they had recorded as a result of testing.  The user went so far as to test the experiment between Java and C++ to see if the results differed.  Finally, a conclusion was drawn with what initially was thought to be the cause, as well as why this conclusion was found to be incorrect.  All of this coming full circle, right back to the main question, just like a good mystery novel.  The answer, it turns out, is caused by &lt;a href=&quot;https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array&quot;&gt;branch prediction&lt;/a&gt;.  The enthusiasm of the answer’s author is abundantly apparent from how they respond.  The detailed explanation comes complete with pictures, metaphors, real-world examples and benchmarks of their own.  Thus illustrating just how excited a nerd can get from a &lt;em&gt;good question&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;to-begin-again&quot;&gt;To begin again&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://imgs.xkcd.com/comics/questions.png&quot; alt=&quot;Markdown Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;I now completely understand the need behind Raymond writing this &lt;a href=&quot;http://www.catb.org/esr/faqs/smart-questions.html&quot;&gt;article&lt;/a&gt;, and how the open source community needs a set of guidelines like his to keep it from careening into the abyss.  I also thoroughly enjoyed reading through the paper and learning a great deal from Raymond’s insight, but I do believe Raymond speaks from an archaic kind of, “nerd elitism.”  I get it, hackers are too busy to deal with the “losers.”  Hackers like dealing with other hackers, this is all well known.  An important aspect to remember is that at some point in time, we all fall under the classification of “loser.”  Even Raymond himself, albeit most likely when he was very young, must have fallen victim to his own criticisms.  Learning to ask a question the right way is just like any learning process: high failure rates gradually decline and interchange with higher rates of success through practice and experience.  However, with such a wealth of knowledge at our fingertips, there is no excuse for ignorance.  So, I suppose the moral of the story is this: First think, then, think some more.  Perhaps go for a walk, think a little bit more, then maybe, and only maybe, ask a question on the internet.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="blog" /><category term="Stack Overflow" /><category term="Eric S. Raymond" /><category term="Open Source" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
+&lt;p&gt;Every hour I spend honing skills, every hour I spend learning new technologies and concepts, every hour thinking of the most efficient way to solve a problem, every hour learning an IDE, every hour &lt;em&gt;accumulates&lt;/em&gt;.  With this in mind, I am excited about what the future holds.  I am also (surprisingly) excited about working within a coding standard, because it means I am participating in something that is bigger than myself.  The use of these standards while attending university gives me a glimpse into a very exciting future where I will be working with other passionate individuals to build the latest and greatest software and technologies.&lt;/p&gt;</content><author><name>whoodes</name></author><category term="blog" /><category term="Coding standards" /><category term="ESLint" /><category term="JetBrains" /><summary type="html"></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/markdown.jpg" /></entry></feed>
