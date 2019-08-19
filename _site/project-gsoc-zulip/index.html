@@ -1465,7 +1465,7 @@ pre {
     
 
     
-        9 mins
+        10 mins
     
 </span>
 
@@ -1507,6 +1507,10 @@ event that previously took a few back and forth emails, and effort from a Zulip 
 the export.</p>
 
 <h2 id="work-completed">Work completed</h2>
+
+<p><em>My work during the summer can be found at my GitHub <a href="https://github.com/whoodes/zulip/projects/2" target="_blank">project</a>.</em></p>
+
+<p><em>All of my merged commits can be found <a href="https://github.com/zulip/zulip/commits?author=whoodes" target="_blank">here</a>.</em></p>
 
 <h3 id="development-productivity-tooling">Development productivity tooling</h3>
 <p><strong>This project consisted of many sub-projects to improve the quality of life for developers.</strong></p>
@@ -1650,7 +1654,7 @@ This pull request was separated out from the <code class="highlighter-rouge">war
 addressing the discrepancies from the <code class="highlighter-rouge">--warn-unreachable</code> option.</p>
   </li>
   <li>
-    <p><a href="https://github.com/zulip/zulip/pull/12894" target="_blank">Fix warn-unreachable errors</a>:</p>
+<a href="https://github.com/zulip/zulip/pull/12894" target="_blank">Fix warn-unreachable errors</a>:
     <ul>
       <li>This project was an awesome exercise in typing with Python.  The <code class="highlighter-rouge">warn-unreachable</code> option flagged many interesting
 errors in our codebase, as well as some more mundane errors that resulted from approaches being somewhat out of date
@@ -1662,6 +1666,14 @@ as well as building up a foundation of consistently referencing documentation wh
 approaches to issues.</li>
     </ul>
   </li>
+  <li>
+<a href="https://github.com/zulip/zulip/pull/13020" target="_blank">Improve testing of SlowQueryWorker</a>:
+During a code review pertaining to some typing fixes, a regression was caught that could have been picked up
+instantly by the improvements that I made to this test case.  Before, the slow query events were being
+mocked. Instead, we now generate the slow query events via the actual code path.  Eliminating the possibility
+for any similar future regressions. However, we were seeing discrepancies when testing for database query
+time, so I sent <a href="https://github.com/zulip/zulip/commit/92dd5e2c4f4b0337a58228444e311e07b2824baf" target="_blank">this</a>
+patch in to address that.</li>
 </ul>
 
 <h3 id="export-feature-for-the-webapp">Export feature for the webapp</h3>
@@ -1694,14 +1706,20 @@ when faced with a spurious failure to running the set of tests with high paralle
   <li>
     <p><a href="https://github.com/zulip/zulip/pull/12575" target="_blank">Parallelize test-js-with-node</a>:
 This is a somewhat tricky issue.  Attempts to simply borrow the approach from how we run our linters in
-parallel (divide-and-conquer the set of tests to run–forking them off into separate processes) doesn’t produce
+parallel (divide-and-conquer the set of tests–forking them off into separate processes) doesn’t produce
 an adequate boost in performance.</p>
   </li>
 </ul>
 
-<p><em>My work during the summer can be found at my GitHub <a href="https://github.com/whoodes/zulip/projects/2" target="_blank">project</a>.</em></p>
+<p>Besides the two projects mentioned above, there will always be plenty of other work to be done!  One of the really enjoyable
+parts of the summer was assisting fellow students when they ran into issues regarding the provisioning process,
+or they were just facing problems with the development experience in general.  Being able to help out the development
+community was a very rewarding experience.  As such, I’ll continue to lend a hand whenever and wherever I can!</p>
 
-<p><em>All of my merged commits can be found <a href="https://github.com/zulip/zulip/commits?author=whoodes" target="_blank">here</a>.</em></p>
+<p>As I head into the new school year, a side-project that I plan to work on involves integrating the mypy pyre-stubs into
+a current stubbing effort with Django.  This project will give me increased exposure to type hinting and annotations, helping
+to improve my understanding.  Alongside this venture, I’d like to work on upgrading to Django 2.x.  Combining these two
+efforts to help improve upon Zulip will push me outside of my comfort zone, helping me to grow as a software engineer.</p>
 
 
 

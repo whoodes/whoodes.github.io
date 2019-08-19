@@ -36,6 +36,10 @@ the export.
 
 ## Work completed
 
+*My work during the summer can be found at my GitHub <a href="https://github.com/whoodes/zulip/projects/2" target="_blank">project</a>.*
+
+*All of my merged commits can be found <a href="https://github.com/zulip/zulip/commits?author=whoodes" target="_blank">here</a>.*
+
 ### Development productivity tooling
 **This project consisted of many sub-projects to improve the quality of life for developers.**
 
@@ -155,6 +159,14 @@ and `True` when type checking.)
   as well as building up a foundation of consistently referencing documentation when looking for standard
   approaches to issues.
   
+* <a href="https://github.com/zulip/zulip/pull/13020" target="_blank">Improve testing of SlowQueryWorker</a>:
+During a code review pertaining to some typing fixes, a regression was caught that could have been picked up
+instantly by the improvements that I made to this test case.  Before, the slow query events were being
+mocked. Instead, we now generate the slow query events via the actual code path.  Eliminating the possibility
+for any similar future regressions. However, we were seeing discrepancies when testing for database query
+time, so I sent <a href="https://github.com/zulip/zulip/commit/92dd5e2c4f4b0337a58228444e311e07b2824baf" target="_blank">this</a>
+patch in to address that.
+
 ### Export feature for the webapp
  
  This project has been on-going since April 2019.  It was an awesome feeling to see this pull request closed,
@@ -182,8 +194,13 @@ when faced with a spurious failure to running the set of tests with high paralle
 This is a somewhat tricky issue.  Attempts to simply borrow the approach from how we run our linters in
 parallel (divide-and-conquer the set of tests--forking them off into separate processes) doesn't produce
 an adequate boost in performance.
- 
- 
-*My work during the summer can be found at my GitHub <a href="https://github.com/whoodes/zulip/projects/2" target="_blank">project</a>.*
 
-*All of my merged commits can be found <a href="https://github.com/zulip/zulip/commits?author=whoodes" target="_blank">here</a>.*
+Besides the two projects mentioned above, there will always be plenty of other work to be done!  One of the really enjoyable
+parts of my summer was assisting fellow students when they ran into issues regarding the provisioning process,
+or when they simply faced problems with the development experience in general.  Being able to help out the development
+community was a very rewarding experience.  As such, I'll continue to lend a hand whenever and wherever I can!
+
+As I head into the new school year, a side-project that I plan to work on involves integrating the mypy pyre-stubs into
+a current stubbing effort with Django.  This project will give me increased exposure to type hinting and annotations, helping
+to improve my understanding.  Alongside this venture, I'd like to work on upgrading to Django 2.x.  Combining these two
+efforts to help improve upon Zulip will push me outside of my comfort zone, helping me to grow as a software engineer.
